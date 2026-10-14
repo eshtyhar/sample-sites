@@ -1,207 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-tier="supernova">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Townhouse Cafe - Cafe in East Harlem, NY</title>
-<meta name="description" content="The Townhouse Cafe is a neighbourhood cafe at 1669 Lexington Ave in East Harlem, New York. Coffee, fresh bites and a relaxed place to sit. Call +1 929-790-0551.">
-<link rel="canonical" href="https://example.com/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Townhouse Cafe - Cafe in East Harlem, NY">
-<meta property="og:description" content="Your neighbourhood cafe on Lexington Ave in East Harlem. Coffee, fresh bites and a comfortable seat.">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "The Townhouse Cafe",
-  "telephone": "+1-929-790-0551",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1669 Lexington Ave, Store",
-    "addressLocality": "New York",
-    "addressRegion": "NY",
-    "postalCode": "10029",
-    "addressCountry": "US"
-  }
-}
-</script>
-<style>
-:root{--cream:#fbf5ec;--latte:#e9d8c0;--brown:#4a2c1d;--espresso:#2a1810;--terra:#c0643a;--sage:#7d8b6a;--ink:#3b2a20}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--espresso);line-height:1.15}
-a{color:inherit}
-.banner{background:var(--espresso);color:#f3e6d4;font-size:.78rem;text-align:center;padding:.5rem 1rem;letter-spacing:.02em}
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
-nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
-.logo{font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;color:var(--espresso);text-decoration:none;display:flex;align-items:center;gap:.5rem}
-.logo svg{width:28px;height:28px}
-.nav-call{background:var(--terra);color:#fff;text-decoration:none;padding:.5rem 1rem;border-radius:999px;font-weight:600;font-size:.9rem}
-.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 20%,#f1c9a5 0,transparent 45%),radial-gradient(circle at 10% 90%,#dfe4cf 0,transparent 40%),linear-gradient(160deg,#fbf5ec,#f3e3cc);padding:3rem 0 4rem}
-.hero-grid{display:grid;gap:2.5rem;align-items:center}
-.eyebrow{display:inline-block;background:#fff;border:1px solid var(--latte);color:var(--terra);font-weight:600;font-size:.8rem;padding:.35rem .8rem;border-radius:999px;text-transform:uppercase;letter-spacing:.08em}
-.hero h1{font-size:clamp(2.4rem,9vw,4.2rem);margin:1rem 0}
-.hero p{font-size:1.1rem;max-width:34rem}
-.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
-.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;padding:.95rem 1.5rem;border-radius:999px}
-.btn svg{width:20px;height:20px}
-.btn-primary{background:var(--brown);color:#fff;box-shadow:0 8px 20px rgba(74,44,29,.25)}
-.btn-ghost{border:2px solid var(--brown);color:var(--brown)}
-.cup{width:min(320px,80%);margin:0 auto;aspect-ratio:1;position:relative}
-.cup .plate{position:absolute;bottom:8%;left:5%;right:5%;height:16%;background:linear-gradient(#fff,#eadccb);border-radius:50%;box-shadow:0 12px 30px rgba(42,24,16,.18)}
-.cup .body{position:absolute;bottom:16%;left:18%;width:56%;height:46%;background:linear-gradient(135deg,#fff,#efe3d3);border-radius:0 0 46% 46%/0 0 60% 60%;box-shadow:inset -10px -8px 0 rgba(192,100,58,.12)}
-.cup .coffee{position:absolute;bottom:58%;left:20%;width:52%;height:8%;background:radial-gradient(ellipse at center,#c8956a 0,#7a4a2e 55%,#4a2c1d 100%);border-radius:50%}
-.cup .handle{position:absolute;bottom:30%;right:12%;width:18%;height:20%;border:10px solid #f2e7d9;border-left:none;border-radius:0 50% 50% 0}
-.steam{position:absolute;bottom:68%;width:10px;height:22%;border-radius:10px;background:linear-gradient(transparent,rgba(74,44,29,.18));filter:blur(1px)}
-.steam.s1{left:36%}.steam.s2{left:46%;height:28%}.steam.s3{left:56%}
-section{padding:4rem 0}
-.section-title{font-size:clamp(1.8rem,5vw,2.5rem);margin-bottom:.75rem}
-.lead{max-width:40rem;font-size:1.05rem}
-.welcome{background:#fff}
-.cards{display:grid;gap:1.25rem;margin-top:2rem}
-.card{background:#fff;border:1px solid var(--latte);border-radius:20px;padding:1.5rem}
-.card h3{font-size:1.25rem;margin:.75rem 0 .35rem}
-.icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--cream)}
-.icon svg{width:28px;height:28px;stroke:var(--terra);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.why{background:var(--espresso);color:#efe2d0}
-.why h2{color:#fff}
-.why-list{display:grid;gap:1rem;margin-top:2rem;list-style:none}
-.why-list li{display:flex;gap:1rem;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:16px;padding:1.2rem}
-.dot{flex:0 0 34px;height:34px;border-radius:50%;background:var(--terra);display:grid;place-items:center}
-.dot svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5}
-.why-list strong{color:#fff;display:block}
-.visit-grid{display:grid;gap:1.5rem;margin-top:2rem}
-.map{border-radius:20px;overflow:hidden;border:1px solid var(--latte);min-height:300px}
-.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
-.info{background:#fff;border-radius:20px;border:1px solid var(--latte);padding:1.5rem}
-.info p{margin-bottom:1rem}
-.info .label{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sage);font-weight:600;margin-bottom:.15rem}
-.callband{background:linear-gradient(135deg,var(--terra),#a24d2a);color:#fff;text-align:center;padding:3.5rem 0}
-.callband h2{color:#fff;font-size:clamp(1.8rem,5vw,2.6rem)}
-.big-call{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.5rem;background:#fff;color:var(--brown);text-decoration:none;font-weight:700;font-size:clamp(1.2rem,5vw,1.6rem);padding:1.1rem 2rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
-.big-call svg{width:26px;height:26px}
-footer{background:var(--espresso);color:#cdb9a3;padding:2rem 0;font-size:.9rem;text-align:center}
-footer strong{color:#fff;font-family:Fraunces,serif;font-size:1.1rem}
-@media(min-width:760px){
-.hero-grid{grid-template-columns:1.2fr 1fr}
-.cards{grid-template-columns:repeat(3,1fr)}
-.why-list{grid-template-columns:repeat(2,1fr)}
-.visit-grid{grid-template-columns:1.4fr 1fr}
-}
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Townhouse Cafe - Cafe in Manhattan, NY</title>
+<meta name="description" content="The Townhouse Cafe on Lexington Ave, Manhattan: espresso, lattes, iced coffee and fresh bites. Rated 4.9 on Google. Message us on WhatsApp.">
+<link rel="canonical" href="https://eshtyhar.github.io/sample-sites/the-townhouse-cafe-manhattan/">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="website"><meta property="og:title" content="The Townhouse Cafe - Cafe in Manhattan, NY"><meta property="og:description" content="The Townhouse Cafe on Lexington Ave, Manhattan: espresso, lattes, iced coffee and fresh bites. Rated 4.9 on Google. Message us on WhatsApp."><meta property="og:url" content="https://eshtyhar.github.io/sample-sites/the-townhouse-cafe-manhattan/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2b1d14">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/sample-sites/assets/v1/site.css">
+<style>:root{--bg:#faf6f0;--surface:#ffffff;--ink:#2b1d14;--muted:#6f5d50;--accent:#c2410c;--accent-ink:#ffffff;--dark:#2b1d14;--display:"Fraunces";--display-weight:700;--display-case:none;--body:"DM Sans";--grad:linear-gradient(135deg,#2b1d14,#5b3a24 55%,#c2410c)}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"The Townhouse Cafe","address":"1669 Lexington Ave Store, New York, NY 10029, United States","telephone":"+1 929-790-0551","url":"https://eshtyhar.github.io/sample-sites/the-townhouse-cafe-manhattan/"}</script>
 </head>
 <body>
-<div class="banner">Free sample design by Eshtyhar Marketing for The Townhouse Cafe - not the official website.</div>
-
-<header class="hero">
-  <div class="wrap">
-    <nav>
-      <a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 14 16 5l12 9v13H4z" fill="#c0643a"/><rect x="12" y="18" width="8" height="9" rx="1" fill="#fbf5ec"/></svg>The Townhouse Cafe</a>
-      <a class="nav-call" href="tel:+19297900551">Call us</a>
-    </nav>
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">East Harlem &middot; Lexington Ave</span>
-        <h1>The Townhouse Cafe</h1>
-        <p>Your neighbourhood cafe on Lexington Avenue in East Harlem. Good coffee, fresh bites and a comfortable place to slow down for a moment.</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="tel:+19297900551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (929) 790-0551</a>
-          <a class="btn btn-ghost" href="#visit">Visit us</a>
-        </div>
-      </div>
-      <div class="cup" aria-hidden="true">
-        <span class="steam s1"></span><span class="steam s2"></span><span class="steam s3"></span>
-        <div class="plate"></div><div class="handle"></div><div class="body"></div><div class="coffee"></div>
-      </div>
-    </div>
-  </div>
-</header>
-
+<div class="progress" aria-hidden="true"></div>
+<div class="ribbon">Free sample design by <b>Eshtyhar Marketing</b> for The Townhouse Cafe - not the official website.</div>
+<header class="hdr over"><div class="wrap">
+<a class="logo" data-in href="/sample-sites/the-townhouse-cafe-manhattan/"><i>T</i>The Townhouse Cafe</a>
+<nav class="nav" aria-label="Main"><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/" aria-current="page">Home</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/about/">About us</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/menu/">Menu</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/contact/">Contact us</a><a class="btn btn-wa" data-wa-tier data-wa-base="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." href="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp us</a></nav>
+<button class="burger" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+</div></header>
 <main>
-<section class="welcome">
-  <div class="wrap">
-    <h2 class="section-title">Welcome in</h2>
-    <p class="lead">Whether you are grabbing a coffee on the way to work, meeting a friend or settling in with a laptop, The Townhouse Cafe is a warm, easy-going spot right on Lexington Ave in East Harlem. Stop by, say hello and make yourself at home.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2 class="section-title">What you'll find</h2>
-    <p class="lead">A look at the kind of things a neighbourhood cafe does best. Ask at the counter for today's selection.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 8h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2v3M12 2v3"/></svg></div>
-        <h3>Coffee &amp; espresso</h3>
-        <p>Freshly made coffee and espresso drinks, hot or iced, made the way you like them.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 14c0-5 4-8 9-8s9 3 9 8"/><path d="M2 14h20l-2 5H4z"/></svg></div>
-        <h3>Fresh bites</h3>
-        <p>Something to go with your cup, from a quick morning bite to an easy lunch.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 3h10l-1 18H8z"/><path d="M6.5 8h11"/><path d="M12 3V1"/></svg></div>
-        <h3>Teas &amp; cold drinks</h3>
-        <p>Not a coffee person? There are plenty of other ways to take a break here.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="why">
-  <div class="wrap">
-    <h2 class="section-title">Why neighbours stop by</h2>
-    <ul class="why-list">
-      <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><strong>Right on Lexington</strong>Easy to reach in East Harlem, steps from the avenue.</div></li>
-      <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><strong>Made fresh</strong>Drinks prepared to order, every time.</div></li>
-      <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><strong>Relaxed and friendly</strong>A cosy, welcoming space to sit, talk or work.</div></li>
-      <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><strong>Local at heart</strong>A cafe made for the people of the neighbourhood.</div></li>
-    </ul>
-  </div>
-</section>
-
-<section id="visit">
-  <div class="wrap">
-    <h2 class="section-title">Visit us</h2>
-    <div class="visit-grid">
-      <div class="map">
-        <iframe title="Map to The Townhouse Cafe" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=The%20Townhouse%20Cafe%2C%201669%20Lexington%20Ave%2C%20New%20York%2C%20NY%2010029&output=embed"></iframe>
-      </div>
-      <div class="info">
-        <p class="label">Address</p>
-        <p>1669 Lexington Ave, Store<br>New York, NY 10029</p>
-        <p class="label">Phone</p>
-        <p><a href="tel:+19297900551">+1 929-790-0551</a></p>
-        <p class="label">Neighbourhood</p>
-        <p>East Harlem, Manhattan</p>
-        <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=1669%20Lexington%20Ave%2C%20New%20York%2C%20NY%2010029">Get directions</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="callband">
-  <div class="wrap">
-    <h2>Questions? Give us a call</h2>
-    <p>We're happy to help.</p>
-    <a class="big-call" href="tel:+19297900551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(929) 790-0551</a>
-  </div>
-</section>
+<section class="hero"><div class="bg" style="background-image:var(--grad)"></div><div class="wrap">
+<div class="eyebrow" style="color:#fff">Cafe &middot; Manhattan, NY</div>
+<h1>Your Lexington Avenue coffee stop</h1>
+<p class="lead">The Townhouse Cafe serves good coffee and fresh bites on Lexington Avenue in Manhattan. Our guests rate us 4.9 on Google. Come in for a quick cup or stay a while.</p>
+<div class="ctas"><a class="btn btn-wa" data-wa-tier data-wa-base="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." href="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Chat on WhatsApp</a><a class="btn btn-ghost" href="tel:+19297900551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 929-790-0551</a></div>
+</div><div class="chip" data-states="[&quot;NOW BREWING · HOUSE ESPRESSO&quot;,&quot;LEXINGTON AVE · DOORS OPEN&quot;,&quot;RATED 4.9 · MANHATTAN&quot;]"></div><div class="cue">SCROLL</div></section>
+<div class="ticker" aria-hidden="true"><div class="track"><span>Fresh espresso</span><span>Lattes and cappuccinos</span><span>Iced coffee</span><span>Breakfast bites</span><span>Pastries</span><span>Takeaway</span><span>Rated 4.9 on Google</span><span>On Lexington Ave</span><span>Fresh espresso</span><span>Lattes and cappuccinos</span><span>Iced coffee</span><span>Breakfast bites</span><span>Pastries</span><span>Takeaway</span><span>Rated 4.9 on Google</span><span>On Lexington Ave</span></div></div>
+<section><div class="wrap split"><div class="reveal"><div class="eyebrow">Welcome</div><h2>Welcome to The Townhouse Cafe</h2><p class="muted">We&#39;re a neighbourhood cafe at 1669 Lexington Ave, a calm place to start your morning or take a break in the afternoon. Expect carefully made drinks, simple food done well and a friendly hello at the counter. Message us on WhatsApp with any questions.</p><a class="btn btn-acc" data-in href="/sample-sites/the-townhouse-cafe-manhattan/about/">About us</a></div><div class="photo reveal"></div></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="eyebrow">What we serve</div><h2 class="reveal">Made for you</h2><div class="cards" style="margin-top:28px"><article class="card reveal"><div class="num">01</div><h3>Espresso drinks</h3><p class="muted">Espressos, lattes and cappuccinos, pulled with care and made the way you like them.</p></article><article class="card reveal"><div class="num">02</div><h3>Drip and cold coffee</h3><p class="muted">Fresh drip for the morning rush and smooth iced coffee for warmer days.</p></article><article class="card reveal"><div class="num">03</div><h3>Tea and more</h3><p class="muted">Hot and iced teas and other non-coffee drinks for when you want something different.</p></article><article class="card reveal"><div class="num">04</div><h3>Breakfast bites</h3><p class="muted">Easy morning food to have with your coffee, here or on your way out.</p></article><article class="card reveal"><div class="num">05</div><h3>Pastries and sweets</h3><p class="muted">Something sweet to go with your cup, morning or afternoon.</p></article><article class="card reveal"><div class="num">06</div><h3>Takeaway</h3><p class="muted">In a hurry? Grab your order to go and head on up Lexington.</p></article></div></div></section>
+<section class="dark"><div class="wrap stats"><div class="reveal"><b data-count="4.9">4.9</b><span class="muted">Google rating</span></div><div class="reveal"><b>Manhattan</b><span class="muted">Find us in</span></div></div></section>
+<section><div class="wrap"><div class="eyebrow">Menu</div><h2 class="reveal">A taste of the menu</h2><div class="gallery" style="margin-top:28px"><figure class="reveal"><figcaption>House espresso</figcaption></figure><figure class="reveal"><figcaption>Classic latte</figcaption></figure><figure class="reveal"><figcaption>Cappuccino</figcaption></figure></div><p style="margin-top:22px"><a class="btn btn-ghost" data-in href="/sample-sites/the-townhouse-cafe-manhattan/menu/">See all menu</a></p></div></section>
+<section class="dark"><div class="wrap"><div class="eyebrow">Why choose us</div><h2 class="reveal">Why people keep coming back</h2><div class="cards" style="margin-top:28px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))"><article class="card reveal"><div class="num">01</div><h3>Rated 4.9 on Google</h3><p class="muted">Our neighbours keep leaving kind reviews, and we work to earn every one.</p></article><article class="card reveal"><div class="num">02</div><h3>Right on Lexington</h3><p class="muted">Easy to find at 1669 Lexington Ave, on your way to work or home.</p></article><article class="card reveal"><div class="num">03</div><h3>Made with care</h3><p class="muted">Every drink is made to order, without cutting corners.</p></article><article class="card reveal"><div class="num">04</div><h3>A place to pause</h3><p class="muted">A calm, friendly room to sit, catch up or get some work done.</p></article></div></div></section>
+<section><div class="wrap split" style="align-items:start"><div><div class="eyebrow">FAQ</div><h2 class="reveal">Good to know</h2></div><div class="faq"><details class="reveal"><summary>Where are you located?</summary><p>We&#39;re at 1669 Lexington Ave, New York, NY 10029, in Manhattan. Message us on WhatsApp if you need directions.</p></details><details class="reveal"><summary>What are your opening hours?</summary><p>Hours can change, so please message us on WhatsApp or call +1 929-790-0551 to check before you visit.</p></details><details class="reveal"><summary>Can I order ahead or pick up?</summary><p>Message us on WhatsApp or call +1 929-790-0551 and we&#39;ll tell you the easiest way to get your order ready.</p></details><details class="reveal"><summary>Can I bring a group or order for an office?</summary><p>Message us on WhatsApp with your numbers and timing, and we&#39;ll let you know what we can do.</p></details><details class="reveal"><summary>How fast do you reply?</summary><p>We answer WhatsApp messages as soon as we can during the day. For anything urgent, give us a call.</p></details></div></div></section>
+<section><div class="wrap"><div class="cta-band reveal"><h2>Come by, or message us first</h2><p>We&#39;re at 1669 Lexington Ave Store in Manhattan.</p><a class="btn btn-wa" data-wa-tier data-wa-base="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." href="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Chat with us on WhatsApp</a></div></div></section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <strong>The Townhouse Cafe</strong>
-    <p>1669 Lexington Ave, Store, New York, NY 10029 &middot; <a href="tel:+19297900551">+1 929-790-0551</a></p>
-    <p style="margin-top:.75rem;font-size:.8rem">Sample design by Eshtyhar Marketing. Not the official website.</p>
-  </div>
-</footer>
+<footer><div class="wrap">
+<div class="cols">
+<div><a class="logo" data-in href="/sample-sites/the-townhouse-cafe-manhattan/" style="color:#fff"><i>T</i>The Townhouse Cafe</a><p style="margin-top:14px">We&#39;re a neighbourhood cafe at 1669 Lexington Ave, a calm place to start your morning or take a break in the afternoon. Expect carefully made drinks, simple food</p></div>
+<div><h4>Pages</h4><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/">Home</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/about/">About us</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/menu/">Menu</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/contact/">Contact us</a></div>
+<div><h4>Legal</h4><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/privacy/">Privacy policy</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/cookies/">Cookie policy</a><a data-in href="/sample-sites/the-townhouse-cafe-manhattan/terms/">Terms of use</a></div>
+<div><h4>Contact</h4><a href="tel:+19297900551">+1 929-790-0551</a><a data-wa-tier data-wa-base="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." href="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe.">WhatsApp</a><a href="https://www.google.com/maps/search/The%20Townhouse%20Cafe%201669%20Lexington%20Ave%20Store%2C%20New%20York%2C%20NY%2010029%2C%20United%20States" target="_blank" rel="noopener">1669 Lexington Ave Store, New York, NY 10029, United States</a></div>
+</div>
+<div class="bottom"><span>&copy; 2026 The Townhouse Cafe. All rights reserved.</span><span>Sample website by Eshtyhar Marketing &middot; Photos: Unsplash</span></div>
+</div></footer>
+<a class="wa-float" data-wa-tier data-wa-base="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." href="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+<div class="mbar"><a class="btn btn-ghost" href="tel:+19297900551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a><a class="btn btn-wa" data-wa-tier data-wa-base="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." href="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp</a></div>
+<button class="vbtn" type="button"><i></i>Versions &amp; colours</button>
+<div class="vpanel" role="dialog" aria-label="Choose a version"><h5>Pick your version</h5><button class="tier" type="button" data-t="spark"><b><span>Spark</span><em>$1,200</em></b><small>Clean, fast and simple - gentle fades.</small></button><button class="tier" type="button" data-t="surge"><b><span>Surge</span><em>$1,650</em></b><small>Scroll reveals, moving ticker, hover effects.</small></button><button class="tier" type="button" data-t="supernova"><b><span>Supernova</span><em>$1,850</em></b><small>Cinematic hero, live status chip, counters, full motion.</small></button><h5>Brand colour</h5><div class="swatches"><button type="button" data-c="#c2410c" style="background:#c2410c" aria-label="Colour #c2410c"></button><button type="button" data-c="#f59e0b" style="background:#f59e0b" aria-label="Colour #f59e0b"></button><button type="button" data-c="#b91c1c" style="background:#b91c1c" aria-label="Colour #b91c1c"></button><button type="button" data-c="#2563eb" style="background:#2563eb" aria-label="Colour #2563eb"></button><button type="button" data-c="#059669" style="background:#059669" aria-label="Colour #059669"></button><button type="button" data-c="#7c3aed" style="background:#7c3aed" aria-label="Colour #7c3aed"></button><button type="button" data-c="#db2777" style="background:#db2777" aria-label="Colour #db2777"></button><button type="button" data-c="#0f766e" style="background:#0f766e" aria-label="Colour #0f766e"></button></div><a class="btn btn-wa" style="width:100%" data-wa-tier data-wa-base="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe." href="https://wa.me/18563896861?text=Hi%20Shahnawaz%2C%20I%20saw%20the%20sample%20website%20for%20The%20Townhouse%20Cafe."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Get this website</a></div>
+<div class="cookie" role="region" aria-label="Cookies"><span>We use only essential cookies to remember your choices. <a data-in href="/sample-sites/the-townhouse-cafe-manhattan/cookies/">Cookie policy</a></span><button type="button">OK</button></div>
+<script src="/sample-sites/assets/v1/site.js" defer></script>
 </body>
 </html>
