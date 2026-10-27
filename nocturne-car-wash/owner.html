@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookings | NOCTURNE Studio OS</title>
+  <meta name="description" content="The owner's side of the NOCTURNE concept: every booking and question from the website in one list, followed up automatically. Sample data.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#07090b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bookings | NOCTURNE Studio OS">
+  <meta property="og:description" content="Every booking from the website lands here, with the text that went out. A concept demo with sample data.">
+  <meta property="og:image" content="https://eshtyhar.github.io/sample-sites/nocturne-car-wash/assets/img/share.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23b4f6ef'/%3E%3Cstop offset='1' stop-color='%2374d8cd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='34' fill='%2306201d'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Geist+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body class="owner">
+  <svg hidden aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><path d="M4 10.5a6.5 6.5 0 1 0 13 0 6.5 6.5 0 1 0-13 0M20 20l-4.6-4.6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 8 2.5 8h-17S6 15 6 9zM10 20.5a2.2 2.2 0 0 0 4 0"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M3 13h5l1.5 3h5L16 13h5M5 5h14l2 8v6H3v-6z"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M9 3.5h6v3H9zM7 5H5v16h14V5h-2M9 13.5l2 2 4-4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M4 6h16v15H4zM4 10.5h16M8 3v5M16 3v5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M3 20a6 6 0 0 1 12 0M5 8a4 4 0 1 0 8 0 4 4 0 1 0-8 0M16 4.5a4 4 0 0 1 0 7M18 14.5a6 6 0 0 1 3 5.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 1 0 0-7M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0M12 7v5l3 2"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="backdrop" aria-hidden="true"><img src="assets/img/backdrop.webp" width="960" height="540" alt=""></div>
+
+  <main id="main">
+    <section class="view signin" id="view-signin" aria-labelledby="h-signin">
+      <form class="signin-card glass" data-signin>
+        <div class="head"><span class="logo-mark" aria-hidden="true">N</span><span><b>Nocturne</b><small>Studio OS · owner</small></span></div>
+        <h1 class="display" id="h-signin">Welcome back,<br>owner.</h1>
+        <p>Sign in to see today's bookings.</p>
+        <label class="field"><span>Username</span><input type="text" name="user" value="owner@nocturne.studio" autocomplete="username"></label>
+        <label class="field"><span>Password</span><input type="password" name="pass" value="nocturne-demo" autocomplete="current-password"></label>
+        <button class="btn btn-teal btn-display" type="submit">Sign in <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="signin-note">Concept demo · the button signs you in · sample data inside</p>
+      </form>
+    </section>
+
+    <section class="view dash" id="view-dash" aria-labelledby="h-bookings" hidden>
+      <aside class="side">
+        <div class="head"><span class="logo-mark" aria-hidden="true">N</span><span><b>Nocturne</b><small>Studio OS</small></span></div>
+        <nav aria-label="Studio OS">
+          <ul class="menu">
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>Overview</button></li>
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-inbox"/></svg>Leads<span class="badge">2</span></button></li>
+            <li><a href="#view-dash" class="is-active" aria-current="page"><svg class="ic" aria-hidden="true"><use href="#i-clipboard"/></svg>Bookings<span class="badge" data-count>9</span></a></li>
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Calendar</button></li>
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Messages<span class="badge">3</span></button></li>
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Customers</button></li>
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Reviews</button></li>
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg>Automations</button></li>
+            <li><button type="button" data-demo><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg>Settings</button></li>
+          </ul>
+        </nav>
+        <div class="me"><span class="avatar" aria-hidden="true">OW</span><span><b>Owner</b><small>owner@nocturne.studio</small></span><a href="index.html" aria-label="Sign out, back to the website"><svg class="ic" aria-hidden="true"><use href="#i-logout"/></svg></a></div>
+      </aside>
+
+      <div class="content">
+        <div class="topbar">
+          <label class="search"><span class="visually-hidden">Search bookings, cars, customers</span><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><input type="search" placeholder="Search bookings, cars, customers" data-search><kbd aria-hidden="true">Ctrl K</kbd></label>
+          <p class="pill live" data-live><i aria-hidden="true"></i>New booking from your website · just now</p>
+          <button class="bell" type="button" aria-label="Notifications, 1 new" data-demo><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg><i aria-hidden="true"></i></button>
+        </div>
+
+        <div class="page-title"><h1 class="display" id="h-bookings">Bookings</h1><span class="pill">Sample data</span></div>
+        <p class="page-sub">Every booking and question from your website, Google and ChatGPT. Followed up automatically.</p>
+
+        <div class="kpis">
+          <div class="kpi glass"><span class="label">Bookings this month</span><b class="display">38</b><small class="up">+11 on September</small></div>
+          <div class="kpi glass"><span class="label">Booked on the website</span><b class="display">68%</b><small>the rest by phone or walk-in</small></div>
+          <div class="kpi glass"><span class="label">Time to book</span><b class="display">28 s</b><small>average, from first tap</small></div>
+          <div class="kpi glass"><span class="label">Texts sent for you</span><b class="display">41</b><small>confirmations and reminders</small></div>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter bookings">
+          <button class="pill is-active" type="button" data-filter="all" aria-pressed="true">All <span data-n="all">9</span></button>
+          <button class="pill" type="button" data-filter="New" aria-pressed="false">New <span data-n="New">1</span></button>
+          <button class="pill" type="button" data-filter="Booked" aria-pressed="false">Booked <span data-n="Booked">3</span></button>
+          <button class="pill" type="button" data-filter="Confirmed" aria-pressed="false">Confirmed <span data-n="Confirmed">2</span></button>
+          <button class="pill" type="button" data-filter="Follow-up" aria-pressed="false">Follow-up <span data-n="Follow-up">1</span></button>
+          <button class="pill" type="button" data-filter="Done" aria-pressed="false">Done <span data-n="Done">2</span></button>
+          <div class="right"><span class="pill">Last 7 days</span><button class="pill" type="button" data-export>Export</button></div>
+        </div>
+
+        <div class="table-wrap glass">
+          <table class="table" data-table>
+            <thead><tr><th scope="col">Customer</th><th scope="col">Vehicle</th><th scope="col">Service</th><th scope="col">When</th><th scope="col">Source</th><th scope="col">Status</th><th scope="col">Follow-up</th></tr></thead>
+            <tbody data-rows>
+              <tr tabindex="0" class="is-new" data-id="daniel" data-name="Daniel Reyes" data-ago="just now" data-car="Porsche 911" data-kind="Coupe" data-work="Ceramic" data-when="Thu 10:00" data-source="Website" data-status="Booked" data-follow="Text sent in 4 s" data-ok="1" data-first="1"></tr>
+              <tr tabindex="0" data-id="nadia" data-name="Nadia K." data-ago="12 min ago" data-car="BMW X5" data-kind="SUV" data-work="Polish" data-when="Asked a question" data-source="ChatGPT" data-status="New" data-follow="Auto-reply sent" data-ok="1"></tr>
+              <tr tabindex="0" data-id="jason" data-name="Jason T." data-ago="1 h ago" data-car="Ford F-150" data-kind="Truck" data-work="Wash" data-when="Today 13:30" data-source="Website" data-status="Confirmed" data-follow="Confirmed by text" data-ok="1"></tr>
+              <tr tabindex="0" data-id="sophie" data-name="Sophie L." data-ago="Yesterday" data-car="Audi A5" data-kind="Coupe" data-work="Ceramic" data-when="Wants a quote" data-source="Google" data-status="Follow-up" data-follow="Follow-up tomorrow" data-ok="0"></tr>
+              <tr tabindex="0" data-id="karim" data-name="Karim B." data-ago="Yesterday" data-car="Tesla Model 3" data-kind="Sedan" data-work="Polish" data-when="Fri 13:00" data-source="Instagram" data-status="Booked" data-follow="Reminder scheduled" data-ok="1"></tr>
+              <tr tabindex="0" data-id="alex" data-name="Alex M." data-ago="2 days ago" data-car="Honda Accord" data-kind="Sedan" data-work="Wash" data-when="Sat 9:00" data-source="Google" data-status="Booked" data-follow="Reminder scheduled" data-ok="1"></tr>
+              <tr tabindex="0" data-id="priya" data-name="Priya S." data-ago="2 days ago" data-car="Range Rover" data-kind="SUV" data-work="Ceramic" data-when="Wed 9:00" data-source="Website" data-status="Confirmed" data-follow="Confirmed by text" data-ok="1"></tr>
+              <tr tabindex="0" data-id="marco" data-name="Marco D." data-ago="3 days ago" data-car="Mercedes C 300" data-kind="Sedan" data-work="Polish" data-when="Mon 15:30" data-source="ChatGPT" data-status="Done" data-follow="Review request sent" data-ok="1"></tr>
+              <tr tabindex="0" data-id="hannah" data-name="Hannah W." data-ago="4 days ago" data-car="Jeep Wrangler" data-kind="SUV" data-work="Wash" data-when="Sun 11:00" data-source="Phone" data-status="Done" data-follow="5-star review left" data-ok="1"></tr>
+            </tbody>
+          </table>
+          <p class="table-empty" data-empty hidden>Nothing matches. Clear the search or pick another filter.</p>
+        </div>
+        <div class="cards" data-cards></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="drawer-root" id="detail" hidden>
+    <div class="dim" data-close></div>
+    <aside class="drawer detail" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <div class="drawer-scroll" data-drawer-scroll>
+        <button class="close" type="button" data-close aria-label="Close booking"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <p class="kicker" data-d="kicker">Booking · just now</p>
+        <h2 class="display" id="detail-title" tabindex="-1" data-d="name"></h2>
+        <p class="car-line" data-d="car"></p>
+        <div class="tiles-2">
+          <div class="tile-2"><span class="label">Drop-off</span><b data-d="drop"></b></div>
+          <div class="tile-2"><span class="label">Phone</span><b data-d="phone"></b></div>
+          <div class="tile-2"><span class="label">Status</span><b><i aria-hidden="true" data-d="status-dot"></i><span data-d="status"></span></b></div>
+          <div class="tile-2"><span class="label">Ready</span><b data-d="ready"></b></div>
+        </div>
+        <span class="label">What happened</span>
+        <ul class="timeline" data-d="timeline"></ul>
+        <div data-d="sms-block">
+          <span class="label">Text sent</span>
+          <div class="bubble"><p data-d="sms"></p><small data-d="sms-meta">Delivered · 4 s after booking</small></div>
+        </div>
+        <span class="label">Customer</span>
+        <p class="customer" data-d="customer"></p>
+      </div>
+      <div class="actions">
+        <button class="btn btn-ghost" type="button" data-demo>Call</button>
+        <button class="btn btn-ghost" type="button" data-demo>Text</button>
+        <button class="btn btn-teal" type="button" data-demo>Open calendar <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </aside>
+  </div>
+
+  <p class="toast glass" role="status" aria-live="polite" data-toast></p>
+  <script src="assets/js/owner.js" defer></script>
+</body>
+</html>
