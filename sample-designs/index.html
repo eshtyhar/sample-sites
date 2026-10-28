@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Sample site designs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e10;--panel:#17171a;--line:#2a2a2f;--text:#f2f0ec;--muted:#a3a1a8;--accent:#ff7a2f;--old:#d9a441}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text)}
+body{font:16px/1.55 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+.wrap{max-width:1680px;margin:0 auto;padding:28px 16px 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.back{color:var(--muted);text-decoration:none;font-size:15px}.back:hover{color:var(--text)}
+h1{font:600 clamp(32px,5vw,56px)/1.05 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 14px;letter-spacing:-.02em}
+h2{font:600 22px/1.2 "Bricolage Grotesque",system-ui,sans-serif;margin:48px 0 16px}
+.status{display:inline-block;padding:6px 12px;border-radius:999px;border:1px solid var(--line);font-size:14px;margin-bottom:16px}
+.status.new{border-color:var(--accent);color:var(--accent)}.status.old{border-color:var(--old);color:var(--old)}
+.about{max-width:860px;color:var(--muted);margin:0}
+.note{max-width:860px;color:var(--muted);font-size:14px;margin:12px 0 0}
+figure{margin:0 0 28px}
+figure img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:var(--panel)}
+figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.phones{display:grid;gap:0 24px}@media(min-width:1100px){.phones{grid-template-columns:1fr 1fr}}
+.next{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px;margin-top:24px}
+.next a{text-decoration:none;padding:10px 16px;border:1px solid var(--line);border-radius:10px}.next a:hover{border-color:var(--text)}
+.cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));margin-top:32px}
+.card{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card:hover{border-color:var(--text)}
+.card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.card div{padding:14px 16px}.card b{display:block;font-size:19px;margin-bottom:6px}
+.card span{font-size:14px;color:var(--muted)}.card span.new{color:var(--accent)}.card span.old{color:var(--old)}
+</style></head><body><div class="wrap">
+<h1>Sample site designs</h1>
+<p class="about">One design per kind of business. Open one and scroll: the screens are in the order a visitor sees them.</p>
+<p class="note">Pictures from the designer, not working websites yet. Emails stay paused until you say yes.</p>
+<div class="cards"><a class="card" href="../sample-design-car-dealers/"><img src="../design-img/car-dealers-0e77-desktop-01-gate-closed.jpg" alt="Car dealers" width="1600" height="900" loading="lazy"><div><b>Car dealers</b><span class="new">New: remade with real cars. Waiting for your yes.</span></div></a>
+<a class="card" href="../sample-design-car-rentals/"><img src="../design-img/car-rentals-4409-desktop-01-pick-up.jpg" alt="Car rentals" width="1600" height="900" loading="lazy"><div><b>Car rentals</b><span class="old">Old version. You asked for real cars; the remake is in line.</span></div></a>
+<a class="card" href="../sample-design-restaurants/"><img src="../design-img/restaurants-98c8-desktop-01-arrive.jpg" alt="Restaurants" width="1600" height="900" loading="lazy"><div><b>Restaurants</b><span class="">Waiting for your look.</span></div></a>
+<a class="card" href="../sample-design-cafes-bakeries/"><img src="../design-img/cafes-bakeries-fe13-desktop-01-open.jpg" alt="Cafes and bakeries" width="1600" height="900" loading="lazy"><div><b>Cafes and bakeries</b><span class="old">Old version. The remake (a real bakery inside) stopped halfway when the PC restarted.</span></div></a>
+<a class="card" href="../sample-design-real-estate/"><img src="../design-img/real-estate-3226-desktop-01-lobby.jpg" alt="Real estate" width="1600" height="900" loading="lazy"><div><b>Real estate</b><span class="old">Old version. The remake (Empire State Building, then into the apartment) is in line.</span></div></a>
+<a class="card" href="../sample-design-medical/"><img src="../design-img/medical-d917-desktop-01-hello.jpg" alt="Medical clinics" width="1600" height="900" loading="lazy"><div><b>Medical clinics</b><span class="">Waiting for your look.</span></div></a></div>
+</div></body></html>
