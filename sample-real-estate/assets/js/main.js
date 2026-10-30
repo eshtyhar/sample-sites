@@ -136,7 +136,7 @@
   var current = -1;
   var vh = window.innerHeight;
   var PER = 1;
-  var ROOMS = ['Midtown · The view', 'Living room', 'Kitchen', 'Bedroom 1', 'Bedroom 2', 'Bathroom', 'Hall · Laundry'];
+  var ROOMS = ['Midtown · The view', 'Living room', 'Hall · Front door', 'Kitchen', 'Bathroom', 'Bedroom 2', 'Bedroom 1'];
   var FLOORS = ['L', '2', '3', '4', '5', '6', 'PH'];
   var NAMES = ['Lobby', 'Listings', 'Viewings', 'Sellers', 'Owners', 'Mortgage', 'Talk to us'];
   var NAV_FOR = [null, 'buy', null, 'sell', 'owners', 'mortgage', 'about'];
