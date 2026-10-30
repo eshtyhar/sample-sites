@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KEYHOUSE | Car rental and chauffeur in Brooklyn</title>
+  <meta name="description" content="Cars, vans and drivers for hire in Brooklyn. Pick your dates, choose a car and send a request. We reply with the price by text or WhatsApp.">
+  <meta name="theme-color" content="#0C0C0D">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KEYHOUSE | Where to this weekend?">
+  <meta property="og:description" content="A car-rental website sample: dates, car and a reservation request, one tap away on any screen.">
+  <meta property="og:image" content="https://eshtyhar.github.io/sample-sites/sample-car-rental/assets/img/share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23E8B964'/%3E%3Cpath d='M15 15a5 5 0 1 0 0 10 5 5 0 1 0 0-10M20 20h12M27 20v4M31 20v3' fill='none' stroke='%231a1408' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/img/d-pickup.webp" media="(min-width: 861px)">
+  <link rel="preload" as="image" href="assets/img/p-pickup.webp" media="(max-width: 860px)">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Geist+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRental","name":"KEYHOUSE","description":"Sample site: a made-up car rental and chauffeur business used to show this website template.","telephone":"+1-718-555-0144","address":{"@type":"PostalAddress","streetAddress":"88 Canal Row","addressLocality":"Brooklyn","addressRegion":"NY","postalCode":"11215","addressCountry":"US"},"openingHours":["Mo-Fr 08:00-20:00","Sa 09:00-18:00","Su 10:00-16:00"]}</script>
+</head>
+<body class="page-home">
+  <svg hidden aria-hidden="true" focusable="false">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path d="M4 6h16v15H4zM4 10.5h16M8 3v5M16 3v5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0M12 7v5l3 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12zM12 6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 1 0 0-5"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 16v-4l2-5h14l2 5v4M3 16h18M3 16v3h3v-3M18 16v3h3v-3M3 12h18M7 14h1M16 14h1"/></symbol>
+    <symbol id="i-van" viewBox="0 0 24 24"><path d="M2 17V7h12l3 4h5v6M2 17h20M5 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0M14 7v4h3"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M12 4a4 4 0 1 0 0 8 4 4 0 1 0 0-8M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7M6 9.5V20h12V9.5M10 20v-5h4v5"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><path d="M7.5 9a3.5 3.5 0 1 0 0 7 3.5 3.5 0 1 0 0-7M11 12.5h10M17 12.5v3M20 12.5v2"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM7 10.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0-3 0M6 15c.5-1.5 1.5-2 2.5-2s2 .5 2.5 2M14 10h4M14 13h3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6zM9 12l2 2 4-4"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.5-4.5L4 8M4 4v4h4M4 13a8 8 0 0 0 14.5 4.5L20 16M20 20v-4h-4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-seat" viewBox="0 0 24 24"><path d="M7 4h5l1 9H7zM6 13h10l1 5H6zM8 18v3M15 18v3"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14v12H5zM9 8V5h6v3M5 13h14"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path d="M6 5v14M12 5v14M18 5v7H6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path class="wa-fill" d="M12 2.6a9.3 9.3 0 0 0-8 14l-1.3 4.7 4.8-1.3A9.3 9.3 0 1 0 12 2.6zm5.3 13.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-3.1-.7-2.6-1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.7s.7-1.9.9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></symbol>
+    <symbol id="mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="var(--gold)"/><path d="M15 15a5 5 0 1 0 0 10 5 5 0 1 0 0-10M20 20h12M27 20v4M31 20v3" fill="none" stroke="#1a1408" stroke-width="2.8" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top" aria-label="KEYHOUSE, back to the start">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-text"><b>KEYHOUSE</b><small>Car rental &amp; chauffeur · Brooklyn</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#cars" data-nav="cars">Cars</a>
+      <a href="#arrive" data-nav="driver">With a driver</a>
+      <a href="#drive" data-nav="rules">Rules</a>
+      <a href="#visit" data-nav="visit">Visit</a>
+    </nav>
+    <div class="top-actions">
+      <span class="open-pill" data-open-now><i></i><span>Open today · till 8 PM</span></span>
+      <a class="btn btn-ghost wide-only" href="https://wa.me/17185550144?text=Hi%20KEYHOUSE%2C%20I%27d%20like%20to%20rent%20a%20car" rel="noopener" target="_blank" data-wa><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      <a class="btn btn-ghost wide-only" href="tel:+17185550144"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>(718) 555-0144</a>
+      <a class="btn btn-gold wide-only" href="#reserve" data-open="rent">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="round phone-only" href="tel:+17185550144" aria-label="Call KEYHOUSE, (718) 555-0144"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></a>
+      <button class="round phone-only" type="button" data-open="menu" aria-label="Menu" aria-expanded="false"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="story" id="top" data-story>
+      <div class="stage">
+        <div class="stills" aria-hidden="true">
+          <div class="still" data-layer="morning"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-pickup.webp"><img src="assets/img/d-pickup.webp" width="1920" height="1080" alt="" fetchpriority="high"></picture></div></div>
+          <div class="still" data-layer="detail"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-keys.webp"><img src="assets/img/d-keys.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="still" data-layer="tesla"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-choose.webp"><img src="assets/img/d-choose-tesla.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="still" data-layer="porsche"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-choose.webp"><img src="assets/img/d-choose-porsche.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="still" data-layer="gclass"><div class="push"><img src="assets/img/d-choose-gclass.webp" width="1920" height="1080" alt="" loading="lazy"></div></div>
+          <div class="still" data-layer="defender"><div class="push"><img src="assets/img/d-choose-defender.webp" width="1920" height="1080" alt="" loading="lazy"></div></div>
+          <div class="still" data-layer="charger"><div class="push"><img src="assets/img/d-choose-charger.webp" width="1920" height="1080" alt="" loading="lazy"></div></div>
+          <div class="still" data-layer="civic"><div class="push"><img src="assets/img/d-choose-civic.webp" width="1920" height="1080" alt="" loading="lazy"></div></div>
+          <div class="still" data-layer="rear"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-drive.webp"><img src="assets/img/d-drive.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="still" data-layer="front"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-arrive.webp"><img src="assets/img/d-arrive.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="still" data-layer="nightrear"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-night.webp"><img src="assets/img/d-night.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="still" data-layer="high"><div class="push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-return.webp"><img src="assets/img/d-return.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="flash" data-flash></div>
+          <div class="wash"></div>
+        </div>
+
+        <div class="progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="phone-label" aria-hidden="true" data-phone-label>01 · Morning · Pick up</p>
+
+        <div class="steps">
+          <section class="step" id="pickup" data-step="0" aria-labelledby="h-pickup">
+            <p class="label">01 · Pick up</p>
+            <h1 class="display" id="h-pickup"><span class="l1">Where to</span> <span class="l2">this weekend?</span></h1>
+            <p class="sub">Cars, vans and drivers for hire in Brooklyn. Pick your dates in the bar below and send a request.</p>
+            <p class="rating"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4.9</b> on Google · 186 reviews</p>
+            <a class="owner-pill" href="owner.html"><span class="owner-spark"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg></span>Owner? How this site fills your calendar</a>
+          </section>
+
+          <section class="step step--card-right" id="keys" data-step="1" aria-labelledby="h-keys">
+            <p class="label">02 · Keys</p>
+            <h2 class="display" id="h-keys"><span class="l1">Dates in.</span> <span class="l2">Keys out.</span></h2>
+            <p class="sub">Choose the day you pick up and the day you bring it back. Your request goes straight to our phone.</p>
+            <div class="card card--dates">
+              <h3 class="card-title">Pick your dates</h3>
+              <p class="k" data-cal-month>Oct – Nov 2026</p>
+              <div class="cal" data-cal role="group" aria-label="Pick-up and return days"></div>
+              <div class="date-fields">
+                <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span class="field-in"><span class="k">Pick-up</span><span class="field-row"><b data-date-text="pickup">Fri, Oct 30</b> · <select data-time="pickup" aria-label="Pick-up time"></select></span></span></label>
+                <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span class="field-in"><span class="k">Return</span><span class="field-row"><b data-date-text="return">Sun, Nov 1</b> · <select data-time="return" aria-label="Return time"></select></span></span></label>
+              </div>
+              <p class="fine" data-days-note>3 days. You see the price for your dates when we reply.</p>
+              <a class="btn btn-gold btn-block btn-lg" href="#choose">Choose a car <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+            <div class="quick">
+              <div class="date-strip"><span><span class="k">Pick-up</span><b data-date-text="pickup">Fri, Oct 30</b><small data-time-text="pickup">10:00 AM</small></span><span><span class="k">Return</span><b data-date-text="return">Sun, Nov 1</b><small data-time-text="return">6:00 PM</small></span></div>
+            </div>
+          </section>
+
+          <section class="step" id="choose" data-step="2" aria-labelledby="h-choose">
+            <p class="label">03 · Choose</p>
+            <h2 class="display swap-a" id="h-choose"><span class="l1">Everyday. Exotic.</span> <span class="l2">Van. Or a driver.</span></h2>
+            <p class="display swap-b" aria-hidden="true"><span class="l1">Same city.</span> <span class="l2">New mood.</span></p>
+            <p class="sub swap-a">Real photos of the real cars, the price per day and the rules for each one.</p>
+            <p class="sub swap-b">Tap a type of car and the car on screen changes with you: everyday, exotic and luxury, vans, or a car with a driver.</p>
+            <div class="card card--fleet" data-fleet>
+              <h3 class="card-title">Our cars</h3>
+              <div class="tabs" role="group" aria-label="Type of car">
+                <button type="button" class="tab" data-type="everyday" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>Everyday</button>
+                <button type="button" class="tab" data-type="exotic" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Exotic &amp; luxury</button>
+                <button type="button" class="tab" data-type="vans" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-van"/></svg>Vans</button>
+                <button type="button" class="tab" data-type="driver" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>With a driver</button>
+              </div>
+              <figure class="fleet-photo"><img src="assets/img/car-tesla.webp" width="720" height="327" alt="Tesla Model 3" data-fleet-img><span class="tag tag--photo" data-fleet-cat>Everyday</span></figure>
+              <p class="fleet-head"><b data-fleet-name>Tesla Model 3</b><span class="price"><b data-fleet-price>$129</b>/day</span></p>
+              <p class="specs" data-fleet-specs><span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg>5 seats</span><span><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>3 bags</span><span><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg>Automatic</span></p>
+              <div class="card-actions two">
+                <a class="btn btn-gold btn-lg" href="#reserve" data-open="rent" data-car-from-fleet>Reserve this <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn-ghost btn-lg" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa-fleet><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>Ask on WhatsApp</a>
+              </div>
+            </div>
+            <div class="quick">
+              <div class="chips chips--scroll" role="group" aria-label="Type of car">
+                <button type="button" class="chip-btn" data-type="everyday">Everyday</button><button type="button" class="chip-btn" data-type="exotic">Exotic</button><button type="button" class="chip-btn" data-type="vans">Vans</button><button type="button" class="chip-btn" data-type="driver">Driver</button>
+              </div>
+              <figure class="quick-photo"><img src="assets/img/car-porsche.webp" width="720" height="327" alt="" data-fleet-img-q></figure>
+              <p class="fleet-head"><b data-fleet-name-q>Porsche 911 Turbo S</b><span class="price"><b data-fleet-price-q>$899</b>/day</span></p>
+              <a class="see-all" href="#cars">See all cars <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </section>
+
+          <section class="step" id="drive" data-step="3" aria-labelledby="h-drive">
+            <p class="label">04 · Drive</p>
+            <h2 class="display" id="h-drive"><span class="l1">Take the</span> <span class="l2">long way home.</span></h2>
+            <p class="sub sub--wide">A weekend upstate, a move across the borough, a day at the beach. Tell us the plan and we'll suggest the car.</p>
+            <p class="sub sub--phone">The rules, up front. Know before you call.</p>
+            <div class="card card--rules">
+              <h3 class="card-title">The rules, up front</h3>
+              <p class="card-sub">Know before you call.</p>
+              <dl class="rules">
+                <div><dt><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>Age</dt><dd>21+ · 25+ for luxury</dd></div>
+                <div class="wide-only"><dt><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>Licence</dt><dd>Full licence, held 1 year</dd></div>
+                <div><dt><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Deposit</dt><dd>$300 hold · $1,500 exotic</dd></div>
+                <div><dt><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Insurance</dt><dd>Yours, or ours from $25/day</dd></div>
+                <div><dt><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>Miles</dt><dd>200 a day included</dd></div>
+                <div class="wide-only"><dt><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Payment</dt><dd>Visa, Mastercard, Amex</dd></div>
+              </dl>
+            </div>
+            <div class="quick">
+              <dl class="rules rules--q">
+                <div><dt>Age</dt><dd>21+ · 25+ for luxury</dd></div>
+                <div><dt>Deposit</dt><dd>$300 hold · $1,500 exotic</dd></div>
+                <div><dt>Insurance</dt><dd>Yours, or ours from $25/day</dd></div>
+                <div><dt>Miles</dt><dd>200 a day included</dd></div>
+              </dl>
+            </div>
+          </section>
+
+          <section class="step" id="arrive" data-step="4" aria-labelledby="h-arrive">
+            <p class="label">05 · Arrive</p>
+            <h2 class="display" id="h-arrive"><span class="l1">Make an</span> <span class="l2 tighten">entrance.</span></h2>
+            <p class="sub">Weddings, proms, airport runs, a big night out. Book the car with a driver.</p>
+            <form class="card card--driver" data-driver-card>
+              <h3 class="card-title">Book a driver</h3>
+              <div class="chips"><label class="chip"><input type="radio" name="occasion" value="Wedding" checked><span>Wedding</span></label><label class="chip"><input type="radio" name="occasion" value="Airport"><span>Airport</span></label><label class="chip"><input type="radio" name="occasion" value="Night out"><span>Night out</span></label><label class="chip"><input type="radio" name="occasion" value="Business"><span>Business</span></label><label class="chip"><input type="radio" name="occasion" value="Prom"><span>Prom</span></label></div>
+              <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span class="field-in"><span class="k">Pick-up address</span><input type="text" name="address" placeholder="Street, apartment, borough" autocomplete="street-address"></span></label>
+              <div class="field-pair">
+                <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="field-in"><span class="k">Date · time</span><select name="when" data-driver-when></select></span></label>
+                <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg><span class="field-in"><span class="k">Passengers</span><select name="passengers"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>6</option><option>7</option></select></span></label>
+              </div>
+              <p class="hours-line">Hours: <b>3-hour minimum</b> · G 63 or Defender, driver in a suit</p>
+              <button class="btn btn-gold btn-block btn-lg" type="submit">Request a driver <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </form>
+            <div class="quick">
+              <div class="chips chips--scroll" data-occasion-quick><button type="button" class="chip-btn is-on">Wedding</button><button type="button" class="chip-btn">Airport</button><button type="button" class="chip-btn">Night out</button><button type="button" class="chip-btn">Prom</button></div>
+              <a class="btn btn-gold btn-block btn-lg" href="#reserve" data-open="driver">Request a driver <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </section>
+
+          <section class="step" id="night" data-step="5" aria-labelledby="h-night">
+            <p class="label">06 · Night</p>
+            <h2 class="display" id="h-night"><span class="l1">We bring it</span> <span class="l2">to your door.</span></h2>
+            <p class="sub">Delivery and collection at your address, if you'd rather not come to us.</p>
+            <form class="card card--deliver" data-deliver-card>
+              <h3 class="card-title">We bring it to you</h3>
+              <div class="seg" role="group" aria-label="Where you collect the car"><button type="button" data-where="lot" aria-pressed="false">At the lot</button><button type="button" data-where="deliver" class="is-on" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg>Deliver to me</button></div>
+              <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span class="field-in"><span class="k">Your address</span><input type="text" name="address" placeholder="Street, apartment, borough" autocomplete="street-address"></span></label>
+              <dl class="rows">
+                <div><dt>Delivery area</dt><dd>Brooklyn + Lower Manhattan</dd></div>
+                <div><dt>Delivery fee</dt><dd>$49 each way</dd></div>
+                <div><dt>Collection</dt><dd>We pick it up at your door</dd></div>
+              </dl>
+              <button class="btn btn-gold btn-block btn-lg" type="submit">Reserve with delivery <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </form>
+            <div class="quick">
+              <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span class="field-in"><span class="k">Your address</span><input type="text" name="address-q" placeholder="Street, apartment, borough" autocomplete="street-address"></span></label>
+              <p class="quick-rows">Area: <b>Brooklyn + Lower Manhattan</b> · Fee: <b>$49</b></p>
+            </div>
+          </section>
+
+          <section class="step" id="return" data-step="6" aria-labelledby="h-return">
+            <p class="label">07 · Return</p>
+            <h2 class="display" id="h-return"><span class="l1">Bring it back.</span> <span class="l2">That's it.</span></h2>
+            <p class="sub">Return it on the day you picked. Want it again? Your details are saved, so next time is two taps.</p>
+            <a class="again" href="#reserve" data-open="rent"><span class="again-ic"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></span><span><b>Rent it again</b><small>Same car, new dates, from the text we send.</small></span></a>
+          </section>
+        </div>
+
+        <aside class="day" aria-label="The rental day">
+          <div class="dial" aria-hidden="true">
+            <svg viewBox="0 0 80 44" class="dial-arc"><path d="M6 40a34 34 0 0 1 68 0" /><line x1="0" y1="40.5" x2="80" y2="40.5"/></svg>
+            <span class="sun" data-sun></span>
+            <span class="dial-label" data-dial-label>Morning</span>
+          </div>
+          <ol class="timeline" data-timeline>
+            <li><a href="#pickup" data-go="0"><b>Pick up</b><small>01 · Morning</small></a></li>
+            <li><a href="#keys" data-go="1"><b>Keys</b><small>02 · Morning</small></a></li>
+            <li><a href="#choose" data-go="2"><b>Choose</b><small>03 · Midday</small></a></li>
+            <li><a href="#drive" data-go="3"><b>Drive</b><small>04 · Afternoon</small></a></li>
+            <li><a href="#arrive" data-go="4"><b>Arrive</b><small>05 · Golden hour</small></a></li>
+            <li><a href="#night" data-go="5"><b>Night</b><small>06 · Night</small></a></li>
+            <li><a href="#return" data-go="6"><b>Return</b><small>07 · Next morning</small></a></li>
+          </ol>
+        </aside>
+        <span class="scroll-hint" aria-hidden="true">Scroll</span>
+      </div>
+    </div>
+
+    <section class="sec" id="cars" aria-labelledby="h-cars">
+      <div class="sec-head">
+        <div>
+          <p class="label">The cars · on the lot today</p>
+          <h2 class="display display--md" id="h-cars">Our cars.</h2>
+        </div>
+        <p class="sec-note">Every car here is on our lot in Brooklyn, with its own photos, its price per day and its rules. Vans and chauffeur cars sit in their own tabs.</p>
+      </div>
+      <div class="tabs tabs--lot" role="group" aria-label="Filter the cars">
+        <button type="button" class="tab" data-filter="all" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg>All</button>
+        <button type="button" class="tab" data-filter="everyday" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>Everyday</button>
+        <button type="button" class="tab" data-filter="exotic" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Exotic &amp; luxury</button>
+        <button type="button" class="tab" data-filter="vans" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-van"/></svg>Vans</button>
+        <button type="button" class="tab" data-filter="driver" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>With a driver</button>
+      </div>
+      <ul class="lot" data-lot>
+        <li class="ccard" data-car="gclass" data-types="exotic driver" data-name="Mercedes-AMG G 63" data-cat="Exotic &amp; luxury" data-price="649" data-seats="5" data-bags="4" data-gear="Automatic" data-age="25">
+          <figure><img src="assets/img/car-gclass.webp" width="720" height="327" alt="Mercedes-AMG G 63" loading="lazy"><span class="tag tag--photo">Exotic &amp; luxury</span></figure>
+          <p class="ccard-head"><b>Mercedes-AMG G 63</b><span class="price"><b>$649</b>/day</span></p>
+          <p class="specs"><span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg>5 seats</span><span><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>4 bags</span><span><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>25+</span></p>
+          <div class="card-actions two"><a class="btn btn-gold" href="#reserve" data-open="rent" data-car-pick="gclass">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa-car="Mercedes-AMG G 63"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
+        </li>
+        <li class="ccard" data-car="porsche" data-types="exotic" data-name="Porsche 911 Turbo S" data-cat="Exotic &amp; luxury" data-price="899" data-seats="4" data-bags="2" data-gear="Automatic" data-age="30">
+          <figure><img src="assets/img/car-porsche.webp" width="720" height="327" alt="Porsche 911 Turbo S" loading="lazy"><span class="tag tag--photo">Exotic &amp; luxury</span></figure>
+          <p class="ccard-head"><b>Porsche 911 Turbo S</b><span class="price"><b>$899</b>/day</span></p>
+          <p class="specs"><span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg>4 seats</span><span><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>2 bags</span><span><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>30+</span></p>
+          <div class="card-actions two"><a class="btn btn-gold" href="#reserve" data-open="rent" data-car-pick="porsche">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa-car="Porsche 911 Turbo S"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
+        </li>
+        <li class="ccard" data-car="defender" data-types="vans driver" data-name="Land Rover Defender 110" data-cat="SUV · 7 seats" data-price="279" data-seats="7" data-bags="5" data-gear="Automatic" data-age="25">
+          <figure><img src="assets/img/car-defender.webp" width="720" height="327" alt="Land Rover Defender 110" loading="lazy"><span class="tag tag--photo">SUV · 7 seats</span></figure>
+          <p class="ccard-head"><b>Land Rover Defender 110</b><span class="price"><b>$279</b>/day</span></p>
+          <p class="specs"><span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg>7 seats</span><span><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>5 bags</span><span><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>25+</span></p>
+          <div class="card-actions two"><a class="btn btn-gold" href="#reserve" data-open="rent" data-car-pick="defender">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa-car="Land Rover Defender 110"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
+        </li>
+        <li class="ccard" data-car="tesla" data-types="everyday" data-name="Tesla Model 3" data-cat="Everyday" data-price="129" data-seats="5" data-bags="3" data-gear="Automatic · electric" data-age="21">
+          <figure><img src="assets/img/car-tesla.webp" width="720" height="327" alt="Tesla Model 3" loading="lazy"><span class="tag tag--photo">Everyday</span></figure>
+          <p class="ccard-head"><b>Tesla Model 3</b><span class="price"><b>$129</b>/day</span></p>
+          <p class="specs"><span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg>5 seats</span><span><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>3 bags</span><span><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>21+</span></p>
+          <div class="card-actions two"><a class="btn btn-gold" href="#reserve" data-open="rent" data-car-pick="tesla">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa-car="Tesla Model 3"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
+        </li>
+        <li class="ccard" data-car="civic" data-types="everyday" data-name="Honda Civic" data-cat="Everyday" data-price="79" data-seats="5" data-bags="2" data-gear="Automatic" data-age="21">
+          <figure><img src="assets/img/car-civic.webp" width="720" height="327" alt="Honda Civic" loading="lazy"><span class="tag tag--photo">Everyday</span></figure>
+          <p class="ccard-head"><b>Honda Civic</b><span class="price"><b>$79</b>/day</span></p>
+          <p class="specs"><span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg>5 seats</span><span><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>2 bags</span><span><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>21+</span></p>
+          <div class="card-actions two"><a class="btn btn-gold" href="#reserve" data-open="rent" data-car-pick="civic">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa-car="Honda Civic"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
+        </li>
+        <li class="ccard" data-car="charger" data-types="everyday" data-name="Dodge Charger" data-cat="Muscle" data-price="149" data-seats="5" data-bags="3" data-gear="Automatic" data-age="25">
+          <figure><img src="assets/img/car-charger.webp" width="720" height="327" alt="Dodge Charger" loading="lazy"><span class="tag tag--photo">Muscle</span></figure>
+          <p class="ccard-head"><b>Dodge Charger</b><span class="price"><b>$149</b>/day</span></p>
+          <p class="specs"><span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg>5 seats</span><span><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>3 bags</span><span><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>25+</span></p>
+          <div class="card-actions two"><a class="btn btn-gold" href="#reserve" data-open="rent" data-car-pick="charger">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa-car="Dodge Charger"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sec sec--visit" id="visit" aria-labelledby="h-talk">
+      <div class="visit-left">
+        <p class="label label--gold">From Google</p>
+        <h2 class="display display--md" id="h-talk">People talk.</h2>
+        <p class="rating rating--row"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4.9</b> on Google · 186 reviews</p>
+        <ul class="reviews">
+          <li><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><p>"Booked the G 63 with a driver for my sister's wedding. Early, spotless, and he waited through the photos."</p><p class="who"><span class="avatar" aria-hidden="true">A</span><b>Aisha</b> · 2 weeks ago</p></li>
+          <li><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><p>"Sent my dates on WhatsApp, had a price in ten minutes and the Model 3 the same afternoon."</p><p class="who"><span class="avatar" aria-hidden="true">T</span><b>Tom</b> · 1 month ago</p></li>
+          <li><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><p>"They dropped the Defender at our door for a weekend upstate. Return on Monday took two minutes."</p><p class="who"><span class="avatar" aria-hidden="true">R</span><b>Rosa</b> · 1 month ago</p></li>
+        </ul>
+        <p class="sample-note">Sample reviews. Their Google reviews show here.</p>
+        <div class="faq">
+          <p class="label label--q label--gold">Questions people ask</p>
+          <details><summary>How old do I have to be?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p>21 for everyday cars, 25 for SUVs and luxury, 30 for the 911. You need a full licence held for at least a year.</p></details>
+          <details><summary>Is there a deposit?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Yes, a hold on your card: $300 for everyday cars, $1,500 for exotics. It's released when the car comes back.</p></details>
+          <details><summary>Can you deliver the car?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Yes, across Brooklyn and Lower Manhattan for $49 each way. Pick "Deliver to me" when you reserve.</p></details>
+          <details><summary>Do I need my own insurance?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Your own policy works if it covers rentals. If not, add ours from $25 a day.</p></details>
+        </div>
+      </div>
+      <div class="visit-right">
+        <div class="map" aria-label="Map: KEYHOUSE on Canal Row, Brooklyn">
+          <div class="map-river"></div>
+          <span class="map-pin" aria-hidden="true"><svg class="ic"><use href="#i-key"/></svg></span>
+        </div>
+        <div class="visit-card">
+          <h3 class="visit-title">88 Canal Row</h3>
+          <p class="visit-addr">Brooklyn, NY 11215 · <span data-open-text>Open today · till 8 PM</span></p>
+          <dl class="hours">
+            <div><dt>Mon – Fri</dt><dd>8 AM – 8 PM</dd></div>
+            <div><dt>Saturday</dt><dd>9 AM – 6 PM</dd></div>
+            <div><dt>Sunday</dt><dd>10 AM – 4 PM</dd></div>
+          </dl>
+          <div class="visit-actions">
+            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=88%20Canal%20Row%2C%20Brooklyn%2C%20NY%2011215" rel="noopener" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+            <a class="btn btn-ghost" href="tel:+17185550144"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>(718) 555-0144</a>
+            <a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a class="brand brand--foot" href="#top" aria-label="KEYHOUSE, back to the start"><svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg><span class="brand-text"><b>KEYHOUSE</b><small>Car rental &amp; chauffeur · Brooklyn</small></span></a>
+    <nav class="foot-nav" aria-label="Footer"><a href="#cars">Cars</a> · <a href="#arrive">With a driver</a> · <a href="#drive">Rules</a> · <a href="#visit">Visit</a> · <span>Privacy</span></nav>
+    <p class="made">Sample site made by Eshtyhar</p>
+    <p class="credit">Car photos: Unsplash and Pexels (free licence)</p>
+  </footer>
+
+  <div class="bar" data-bar>
+    <button type="button" class="bar-field" data-open="rent" data-focus="pickup"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span><span class="k">Pick-up</span><b data-bar-text="pickup">Fri, Oct 30 · 10:00 AM</b></span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+    <button type="button" class="bar-field" data-open="rent" data-focus="return"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span><span class="k">Return</span><b data-bar-text="return">Sun, Nov 1 · 6:00 PM</b></span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+    <label class="bar-field"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg><span><span class="k">Car</span><select data-bar-car aria-label="Car"><option value="">Any car</option></select></span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></label>
+    <label class="bar-field"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span><span class="k">Where</span><select data-bar-where aria-label="Where"><option value="lot">At the lot</option><option value="deliver">Deliver to me</option></select></span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></label>
+    <a class="btn btn-gold bar-go" href="#reserve" data-open="rent">Reserve <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <span class="bar-sep" aria-hidden="true"></span>
+    <a class="btn btn-ghost" href="tel:+17185550144"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+    <a class="btn btn-ghost" href="https://wa.me/17185550144" rel="noopener" target="_blank" data-wa><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+  </div>
+
+  <div class="pbar">
+    <button type="button" class="pbar-dates" data-open="rent"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span><span class="k" data-pbar-k>Dates · Any car</span><b data-pbar-text>Oct 30 – Nov 1</b></span></button>
+    <a class="pbar-wa" href="https://wa.me/17185550144" rel="noopener" target="_blank" aria-label="WhatsApp KEYHOUSE" data-wa><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg></a>
+    <a class="btn btn-gold" href="#reserve" data-open="rent">Reserve</a>
+  </div>
+
+  <div class="sheet-root" id="reserve" hidden data-sheets>
+    <div class="dim" data-close></div>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" data-sheet>
+      <span class="sheet-handle" aria-hidden="true"></span>
+      <button class="close" type="button" data-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+      <div class="sheet-scroll" data-sheet-scroll>
+        <form class="sheet-form" data-form novalidate>
+          <p class="label" data-mode-label>Reservation request</p>
+          <h2 class="sheet-title" id="sheet-title" tabindex="-1" data-mode-title>Where to?</h2>
+          <div class="fill" aria-hidden="true"><i data-fill></i></div>
+
+          <div data-only="rent">
+            <div class="car-box">
+              <img src="assets/img/car-tesla.webp" width="720" height="327" alt="" data-box-img>
+              <span class="car-box-text"><b data-box-name>Any car</b><span data-box-price>Tell us what you need</span></span>
+              <label class="change">Change<select name="car" data-sheet-car aria-label="Car"><option value="">Any car</option></select></label>
+            </div>
+            <div class="fields">
+              <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="field-in"><span class="k">Pick-up</span><span class="field-row"><select name="pickupDate" data-date-sel="pickup" aria-label="Pick-up day"></select><select name="pickupTime" data-time="pickup" aria-label="Pick-up time"></select></span></span></label>
+              <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="field-in"><span class="k">Return</span><span class="field-row"><select name="returnDate" data-date-sel="return" aria-label="Return day"></select><select name="returnTime" data-time="return" aria-label="Return time"></select></span></span></label>
+            </div>
+            <p class="k k-row">Where</p>
+            <div class="chips"><label class="chip"><input type="radio" name="where" value="lot" checked><span><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg>At the lot</span></label><label class="chip"><input type="radio" name="where" value="deliver"><span><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg>Deliver to me</span></label></div>
+            <label class="field field--full" data-deliver-only hidden><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span class="field-in"><span class="k">Your address · $49 each way</span><input type="text" name="deliverAddress" placeholder="Street, apartment, borough" autocomplete="street-address"></span></label>
+          </div>
+
+          <div data-only="driver" hidden>
+            <p class="k k-row">Occasion</p>
+            <div class="chips"><label class="chip"><input type="radio" name="occasion" value="Wedding" checked><span>Wedding</span></label><label class="chip"><input type="radio" name="occasion" value="Airport"><span>Airport</span></label><label class="chip"><input type="radio" name="occasion" value="Night out"><span>Night out</span></label><label class="chip"><input type="radio" name="occasion" value="Business"><span>Business</span></label><label class="chip"><input type="radio" name="occasion" value="Prom"><span>Prom</span></label></div>
+            <label class="field field--full"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span class="field-in"><span class="k">Pick-up address</span><input type="text" name="address" placeholder="Street, apartment, borough" autocomplete="street-address"></span></label>
+            <div class="fields">
+              <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="field-in"><span class="k">Date · time</span><select name="when" data-driver-when></select></span></label>
+              <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg><span class="field-in"><span class="k">Passengers</span><select name="passengers"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>6</option><option>7</option></select></span></label>
+            </div>
+            <p class="fine">3-hour minimum · G 63 or Defender, driver in a suit.</p>
+          </div>
+
+          <label class="field field--full field--gap"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg><span class="field-in"><span class="k">Your name</span><input type="text" name="name" autocomplete="name" required></span></label>
+          <label class="field field--full field--gap"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span class="field-in"><span class="k">Your phone</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></span></label>
+          <p class="k k-row">Reply to me by</p>
+          <div class="chips"><label class="chip"><input type="radio" name="reply" value="Text"><span>Text</span></label><label class="chip"><input type="radio" name="reply" value="WhatsApp" checked><span><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</span></label></div>
+          <label class="check" data-only="rent"><input type="checkbox" name="age" required><span class="box" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span><span>I'm <b data-min-age>21</b> or older with a valid licence</span></label>
+          <p class="form-error" data-error role="alert"></p>
+          <div class="sheet-foot">
+            <button class="btn btn-gold btn-block btn-xl" type="submit">Send request <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <p class="fine">This is a request, not a charge. Keyhouse checks the car is free and replies with the price by text or WhatsApp.</p>
+            <p class="demo-note">Sample site · nothing is sent</p>
+          </div>
+        </form>
+
+        <div class="sheet-done" data-done hidden>
+          <div class="ring" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></div>
+          <h2 class="sheet-title center" tabindex="-1" data-done-title>Request sent.</h2>
+          <p class="sheet-sub center" data-done-sub>We'll reply on WhatsApp to confirm.</p>
+          <dl class="summary" data-summary></dl>
+          <p class="label label--next">What happens next</p>
+          <ol class="next">
+            <li><span>1</span>Keyhouse checks the car is free for your dates.</li>
+            <li><span>2</span>You get a reply with the price for your dates.</li>
+            <li><span>3</span><span>At pick-up, bring what the rules ask for:<b>your licence, the card you booked with and a second ID.</b></span></li>
+          </ol>
+          <div class="sheet-foot"><button class="btn btn-ghost btn-block btn-xl" type="button" data-close>Done</button><p class="demo-note">Sample site · nothing is sent</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-root" hidden data-menu>
+    <div class="dim" data-menu-close></div>
+    <nav class="menu" aria-label="Menu">
+      <button class="close" type="button" data-menu-close aria-label="Close menu"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+      <a href="#cars">Cars</a><a href="#arrive">With a driver</a><a href="#drive">Rules</a><a href="#visit">Visit</a>
+      <p class="menu-hours"><span data-open-text>Open today · till 8 PM</span><br>88 Canal Row, Brooklyn</p>
+      <a class="btn btn-ghost btn-block" href="https://wa.me/17185550144" rel="noopener" target="_blank"><svg class="ic ic-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    </nav>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
