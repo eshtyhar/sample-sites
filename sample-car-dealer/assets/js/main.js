@@ -11,12 +11,12 @@
   var OUT = 'cubic-bezier(.2,.7,.2,1)';
   var INOUT = 'cubic-bezier(.65,0,.35,1)';
   var CARS = {
-    defender: { name: 'Defender', full: '2021 Land Rover Defender 110 SE', meta: '$61,900 · 31,400 mi', img: 'assets/img/d-04-car-defender-night.webp' },
-    porsche: { name: '911', full: '2020 Porsche 911 Turbo S', meta: '$189,500 · 12,800 mi', img: 'assets/img/d-04-car-porsche-night.webp' },
-    civic: { name: 'Civic', full: '2019 Honda Civic EX', meta: '$18,900 · 48,200 mi', img: 'assets/img/d-04-car-civic-night.webp' },
-    gclass: { name: 'G 500', full: '2019 Mercedes-Benz G 500', meta: '$119,000 · 26,500 mi', img: 'assets/img/d-04-car-gclass-night.webp' },
-    tesla: { name: 'Model 3', full: '2022 Tesla Model 3 Long Range', meta: '$31,400 · 24,700 mi', img: 'assets/img/d-04-car-tesla-night.webp' },
-    charger: { name: 'Charger', full: '2020 Dodge Charger SRT Hellcat', meta: '$54,800 · 19,600 mi', img: 'assets/img/d-04-car-charger-night.webp' }
+    defender: { name: 'Defender', full: '2021 Land Rover Defender 110 SE', meta: '$61,900 · 31,400 mi', img: 'assets/img/c-defender.webp' },
+    porsche: { name: '911', full: '2020 Porsche 911 Turbo S', meta: '$189,500 · 12,800 mi', img: 'assets/img/c-porsche.webp' },
+    civic: { name: 'Civic', full: '2019 Honda Civic EX', meta: '$18,900 · 48,200 mi', img: 'assets/img/c-civic.webp' },
+    gclass: { name: 'G 500', full: '2019 Mercedes-Benz G 500', meta: '$119,000 · 26,500 mi', img: 'assets/img/c-gclass.webp' },
+    tesla: { name: 'Model 3', full: '2022 Tesla Model 3 Long Range', meta: '$31,400 · 24,700 mi', img: 'assets/img/c-tesla.webp' },
+    charger: { name: 'Charger', full: '2020 Dodge Charger SRT Hellcat', meta: '$54,800 · 19,600 mi', img: 'assets/img/c-charger.webp' }
   };
   var ORDER = ['defender', 'porsche', 'civic', 'gclass', 'tesla', 'charger'];
 
@@ -62,7 +62,7 @@
   var bars = $$('.progress-row i');
   var dock = $('[data-dock]');
   var pbar = $('.pbar');
-  var canvas = $('[data-gate]');
+  var shutter = $('[data-shutter]');
   var vh = window.innerHeight;
   var PER = 1;
   var state = -1;
@@ -78,10 +78,9 @@
   var lite = reduceMotion || saveData;
 
   function stillFor(t) {
-    if (t <= 0) return 'gate';
-    if (t === 1) return lite ? 'opening' : 'gate';
-    if (t === 2) return carChosen ? 'car-' + car : 'open';
-    if (t === 3) return 'car-' + car;
+    if (t <= 1) return 'gate';
+    if (t === 2) return carChosen && car !== 'defender' ? 'car-' + car : 'gate';
+    if (t === 3) return car === 'defender' ? 'gate' : 'car-' + car;
     return ['look', 'sit', 'trade', 'drive'][t - 4];
   }
 
@@ -162,47 +161,12 @@
     markNav();
   }
 
-  /* the gate: frames scrubbed on a canvas */
-  var frames = [];
-  var gateReady = false;
-  function loadGate() {
-    if (!canvas || lite) return;
-    var phone = phoneMq.matches;
-    var n = phone ? 12 : 16;
-    var dir = phone ? 'assets/img/gate-p/' : 'assets/img/gate/';
-    frames = [];
-    var left = n;
-    for (var i = 0; i < n; i++) {
-      var im = new Image();
-      im.decoding = 'async';
-      im.onload = im.onerror = function () { if (--left === 0) { gateReady = true; update(); } };
-      im.src = dir + ('00' + i).slice(-3) + '.webp';
-      frames.push(im);
-    }
-  }
-  var lastFrame = -1;
-  function drawGate(g) {
-    if (!canvas) return;
-    var on = gateReady && g > 0.001 && !lite;
-    canvas.classList.toggle('is-on', on);
-    if (!on) { lastFrame = -1; return; }
-    var idx = Math.round(g * (frames.length - 1));
-    var im = frames[idx];
-    if (!im || !im.naturalWidth || idx === lastFrame) return;
-    lastFrame = idx;
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var cw = canvas.clientWidth, ch = canvas.clientHeight;
-    if (canvas.width !== Math.round(cw * dpr)) { canvas.width = Math.round(cw * dpr); canvas.height = Math.round(ch * dpr); }
-    var ctx = canvas.getContext('2d');
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var s = Math.max(cw / im.naturalWidth, ch / im.naturalHeight);
-    var w = im.naturalWidth * s, h = im.naturalHeight * s;
-    var x = (cw - w) / 2, y = (ch - h) / 2;
-    if (!phoneMq.matches) {         // the hero crop: 112 %, anchored top and 25 % from the left
-      x = 0.25 * cw + (x - 0.25 * cw) * 1.12; y *= 1.12; w *= 1.12; h *= 1.12;
-    }
-    ctx.clearRect(0, 0, cw, ch);
-    ctx.drawImage(im, x, y, w, h);
+  /* the gate: a roll-up shutter over the real photo, scrubbed by scroll */
+  function setGate(g) {
+    if (!shutter) return;
+    var gate = stills.gate;
+    gate.style.setProperty('--g', g.toFixed(4));
+    gate.classList.toggle('is-up', g >= 0.999);
   }
 
   function layout() {
@@ -210,7 +174,6 @@
     vh = window.innerHeight;
     PER = phoneMq.matches ? 0.8 : 1;
     story.style.height = Math.round((8 * PER + 1) * vh) + 'px';
-    lastFrame = -1;
     update();
   }
 
@@ -220,7 +183,7 @@
     var u = clamp(y / (PER * vh), 0, 7.999);
     var t = u < 1 ? 0 : u < 2 ? 1 : u < 3 ? 2 : u < 4 ? 3 : Math.floor(u);
     setState(t);
-    if (t <= 1) drawGate(clamp((u - 0.3) / 1.5, 0, 1));
+    setGate(t >= 2 ? 1 : lite ? (t >= 1 ? 1 : 0) : clamp((u - 0.3) / 1.5, 0, 1));
     if (t === 3) {
       var ci = clamp(Math.floor((u - 3) * 6), 0, 5);
       if (ci !== scrollCar) { scrollCar = ci; setCar(ORDER[ci]); }
@@ -287,10 +250,8 @@
     window.addEventListener('resize', function () {
       var touch = window.matchMedia('(pointer: coarse)').matches;
       if (touch && window.innerWidth === lastW && Math.abs(window.innerHeight - vh) < 140) return;   // the phone's address bar
-      var wasPhone = PER !== 1;
       lastW = window.innerWidth;
       layout();
-      if (wasPhone !== phoneMq.matches) { gateReady = false; loadGate(); }
     });
     shown = 'gate';
     steps[0].classList.remove('is-active');
@@ -298,7 +259,6 @@
     if (poster && !reduceMotion) poster.classList.add('breathe');
     layout();
     if (state === 0) { state = -1; window.requestAnimationFrame(function () { window.requestAnimationFrame(function () { setState(0); }); }); }
-    if (document.readyState === 'complete') loadGate(); else window.addEventListener('load', loadGate);
     if (location.hash) setTimeout(function () { goTo(location.hash); }, 80);
     $$('[data-tiles] .tile').forEach(function (t) { t.addEventListener('click', function () { setCar(t.getAttribute('data-car'), true); }); });
   } else {

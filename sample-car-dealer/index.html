@@ -14,8 +14,8 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23FF7A2F'/%3E%3Crect x='14' y='9' width='12' height='22' rx='6' fill='none' stroke='%231A0B03' stroke-width='4'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/img/d-01-closed-night.webp" media="(min-width: 861px)">
-  <link rel="preload" as="image" href="assets/img/p-01-closed-night.webp" media="(max-width: 860px)">
+  <link rel="preload" as="image" href="assets/img/s-open.webp" media="(min-width: 861px)">
+  <link rel="preload" as="image" href="assets/img/p-open.webp" media="(max-width: 860px)">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
@@ -70,22 +70,19 @@
     <div class="story" id="top" data-story>
       <div class="stage">
         <div class="stills" aria-hidden="true">
-          <div class="still still--hero is-active is-near" data-still="gate">
-            <picture><source media="(max-width: 860px)" srcset="assets/img/p-01-closed-night.webp" width="780" height="1688"><img src="assets/img/d-01-closed-night.webp" width="1920" height="1080" alt="" fetchpriority="high"></picture>
-            <canvas class="gate-canvas" data-gate></canvas>
+          <div class="still is-active is-near" data-still="gate">
+            <picture><source media="(max-width: 860px)" srcset="assets/img/p-open.webp" width="780" height="1688"><img src="assets/img/s-open.webp" width="1920" height="1080" alt="" fetchpriority="high"></picture>
+            <div class="shutter" data-shutter></div>
           </div>
-          <div class="still still--hero" data-still="opening"><picture><source media="(max-width: 860px)" srcset="assets/img/p-03-open-night.webp" width="780" height="1688"><img src="assets/img/d-02-opening-night.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
-          <div class="still still--hero" data-still="open"><picture><source media="(max-width: 860px)" srcset="assets/img/p-03-open-night.webp" width="780" height="1688"><img src="assets/img/d-03-open-night.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
-          <div class="still still--hero still--car" data-still="car-defender"><img src="assets/img/d-04-car-defender-night.webp" width="1920" height="1080" alt="" loading="lazy"></div>
-          <div class="still still--hero still--car" data-still="car-porsche"><img src="assets/img/d-04-car-porsche-night.webp" width="1920" height="1080" alt="" loading="lazy"></div>
-          <div class="still still--hero still--car" data-still="car-civic"><img src="assets/img/d-04-car-civic-night.webp" width="1920" height="1080" alt="" loading="lazy"></div>
-          <div class="still still--hero still--car" data-still="car-gclass"><img src="assets/img/d-04-car-gclass-night.webp" width="1920" height="1080" alt="" loading="lazy"></div>
-          <div class="still still--hero still--car" data-still="car-tesla"><img src="assets/img/d-04-car-tesla-night.webp" width="1920" height="1080" alt="" loading="lazy"></div>
-          <div class="still still--hero still--car" data-still="car-charger"><img src="assets/img/d-04-car-charger-night.webp" width="1920" height="1080" alt="" loading="lazy"></div>
-          <div class="still" data-still="look"><picture><source media="(max-width: 860px)" srcset="assets/img/p-05-detail-night.webp" width="780" height="1688"><img src="assets/img/d-05-detail-night.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
-          <div class="still" data-still="sit"><div class="still-push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-06-cabin-night.webp" width="780" height="1688"><img src="assets/img/d-06-cabin-night.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
-          <div class="still" data-still="trade"><picture><source media="(max-width: 860px)" srcset="assets/img/p-07-profile-night.webp" width="780" height="1688"><img src="assets/img/d-07-profile-night.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
-          <div class="still" data-still="drive"><picture><source media="(max-width: 860px)" srcset="assets/img/p-08-drive-night.webp" width="780" height="1688"><img src="assets/img/d-08-drive-night.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="car-porsche"><picture><source media="(max-width: 860px)" srcset="assets/img/p-car-porsche.webp" width="780" height="1688"><img src="assets/img/s-car-porsche.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="car-civic"><picture><source media="(max-width: 860px)" srcset="assets/img/p-car-civic.webp" width="780" height="1688"><img src="assets/img/s-car-civic.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="car-gclass"><picture><source media="(max-width: 860px)" srcset="assets/img/p-car-gclass.webp" width="780" height="1688"><img src="assets/img/s-car-gclass.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="car-tesla"><picture><source media="(max-width: 860px)" srcset="assets/img/p-car-tesla.webp" width="780" height="1688"><img src="assets/img/s-car-tesla.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="car-charger"><picture><source media="(max-width: 860px)" srcset="assets/img/p-car-charger.webp" width="780" height="1688"><img src="assets/img/s-car-charger.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="look"><picture><source media="(max-width: 860px)" srcset="assets/img/p-look.webp" width="780" height="1688"><img src="assets/img/s-look.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="sit"><div class="still-push"><picture><source media="(max-width: 860px)" srcset="assets/img/p-sit.webp" width="780" height="1688"><img src="assets/img/s-sit.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div></div>
+          <div class="still" data-still="trade"><picture><source media="(max-width: 860px)" srcset="assets/img/p-trade.webp" width="780" height="1688"><img src="assets/img/s-trade.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
+          <div class="still" data-still="drive"><picture><source media="(max-width: 860px)" srcset="assets/img/p-drive.webp" width="780" height="1688"><img src="assets/img/s-drive.webp" width="1920" height="1080" alt="" loading="lazy"></picture></div>
           <div class="shade"></div>
         </div>
 
@@ -105,13 +102,13 @@
           <section class="step" id="choose" data-step="2" aria-labelledby="h-choose">
             <p class="label">02 · Choose</p>
             <h2 class="display" id="h-choose"><span class="l1">The whole lot.</span> <span class="l2">On your phone.</span></h2>
-            <p class="sub wide-only">Every car we have, with real photos and the price. Tap one and it takes the turntable.</p>
-            <p class="sub phone-only">Every car we have. Tap one, it takes the turntable.</p>
+            <p class="sub wide-only">Every car we have, with real photos and the price. Tap one to see it up close.</p>
+            <p class="sub phone-only">Every car we have. Tap one to see it up close.</p>
           </section>
           <section class="step" data-step="3" aria-labelledby="h-switch">
             <p class="label">02 · Choose</p>
             <h2 class="display" id="h-switch"><span class="l1" data-switch-line>Defender or 911?</span> <span class="l2">Tap to switch.</span></h2>
-            <p class="sub">SUVs, sports cars, sedans, EVs. Tap any car on the lot and it rolls onto the turntable.</p>
+            <p class="sub">SUVs, sports cars, sedans, EVs. Tap any car on the lot to see it here.</p>
           </section>
           <section class="step" id="look" data-step="4" aria-labelledby="h-look">
             <p class="label">03 · Look</p>
@@ -143,14 +140,14 @@
         <form class="card card--find" data-show="2 3" data-find aria-labelledby="h-find">
           <h3 class="card-title" id="h-find">Find your car</h3>
           <p class="card-meta"><b>64 cars</b> on the lot · updated daily</p>
-          <p class="k k-row">Tap one, it rolls onto the turntable</p>
-          <div class="tiles" role="group" aria-label="Cars on the turntable" data-tiles>
-            <button type="button" class="tile is-on" data-car="defender" aria-pressed="true"><img src="assets/img/d-04-car-defender-night.webp" width="1920" height="1080" alt="" loading="lazy"><span>Defender</span></button>
-            <button type="button" class="tile" data-car="porsche" aria-pressed="false"><img src="assets/img/d-04-car-porsche-night.webp" width="1920" height="1080" alt="" loading="lazy"><span>911</span></button>
-            <button type="button" class="tile" data-car="civic" aria-pressed="false"><img src="assets/img/d-04-car-civic-night.webp" width="1920" height="1080" alt="" loading="lazy"><span>Civic</span></button>
-            <button type="button" class="tile" data-car="gclass" aria-pressed="false"><img src="assets/img/d-04-car-gclass-night.webp" width="1920" height="1080" alt="" loading="lazy"><span>G 500</span></button>
-            <button type="button" class="tile" data-car="tesla" aria-pressed="false"><img src="assets/img/d-04-car-tesla-night.webp" width="1920" height="1080" alt="" loading="lazy"><span>Model 3</span></button>
-            <button type="button" class="tile" data-car="charger" aria-pressed="false"><img src="assets/img/d-04-car-charger-night.webp" width="1920" height="1080" alt="" loading="lazy"><span>Charger</span></button>
+          <p class="k k-row">Tap one to see it</p>
+          <div class="tiles" role="group" aria-label="Cars on the lot" data-tiles>
+            <button type="button" class="tile is-on" data-car="defender" aria-pressed="true"><img src="assets/img/c-defender.webp" width="960" height="640" alt="" loading="lazy"><span>Defender</span></button>
+            <button type="button" class="tile" data-car="porsche" aria-pressed="false"><img src="assets/img/c-porsche.webp" width="960" height="640" alt="" loading="lazy"><span>911</span></button>
+            <button type="button" class="tile" data-car="civic" aria-pressed="false"><img src="assets/img/c-civic.webp" width="960" height="640" alt="" loading="lazy"><span>Civic</span></button>
+            <button type="button" class="tile" data-car="gclass" aria-pressed="false"><img src="assets/img/c-gclass.webp" width="960" height="640" alt="" loading="lazy"><span>G 500</span></button>
+            <button type="button" class="tile" data-car="tesla" aria-pressed="false"><img src="assets/img/c-tesla.webp" width="960" height="640" alt="" loading="lazy"><span>Model 3</span></button>
+            <button type="button" class="tile" data-car="charger" aria-pressed="false"><img src="assets/img/c-charger.webp" width="960" height="640" alt="" loading="lazy"><span>Charger</span></button>
           </div>
           <div class="selects wide-only">
             <label class="field"><span class="field-in"><span class="k">Make</span><select name="make"><option>Any make</option></select></span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></label>
@@ -163,7 +160,7 @@
 
         <form class="card card--ask" data-show="4" data-ask-card novalidate aria-labelledby="h-askcard">
           <h3 class="card-title" id="h-askcard">Ask about this car</h3>
-          <div class="car-box car-box--plain"><img src="assets/img/d-05-detail-night.webp" width="1920" height="1080" alt="" loading="lazy"><span class="car-box-text"><b>2020 Porsche 911 Turbo S</b><span>$189,500 · 12,800 mi</span></span></div>
+          <div class="car-box car-box--plain"><img src="assets/img/c-look.webp" width="960" height="640" alt="" loading="lazy"><span class="car-box-text"><b>2020 Porsche 911 Turbo S</b><span>$189,500 · 12,800 mi</span></span></div>
           <p class="k k-row">Tap a question</p>
           <div class="qlist">
             <label class="qopt"><input type="radio" name="question" value="Is it still available?" checked><span><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Is it still available?<svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></span></label>
@@ -232,12 +229,12 @@
         </div>
       </div>
       <ul class="cars" data-cars>
-        <li class="car" data-body="suv" data-car="defender"><a class="car-photo" href="car.html"><img src="assets/img/d-04-car-defender-night.webp" width="1920" height="1080" alt="a white Land Rover Defender 110 on the turntable" loading="lazy"><span class="tag">Stock OM-2417</span></a><div class="car-info"><a class="car-name" href="car.html">2021 Land Rover Defender 110 SE</a><span class="car-meta"><b>$61,900</b><span>31,400 mi · SUV</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
-        <li class="car" data-body="coupe" data-car="porsche"><a class="car-photo" href="car.html"><img src="assets/img/d-04-car-porsche-night.webp" width="1920" height="1080" alt="a silver Porsche 911 Turbo S" loading="lazy"><span class="tag">Stock OM-2402</span></a><div class="car-info"><a class="car-name" href="car.html">2020 Porsche 911 Turbo S</a><span class="car-meta"><b>$189,500</b><span>12,800 mi · Coupe</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
-        <li class="car" data-body="sedan" data-car="civic"><a class="car-photo" href="car.html"><img src="assets/img/d-04-car-civic-night.webp" width="1920" height="1080" alt="a grey Honda Civic sedan" loading="lazy"><span class="tag">Stock OM-2433</span></a><div class="car-info"><a class="car-name" href="car.html">2019 Honda Civic EX</a><span class="car-meta"><b>$18,900</b><span>48,200 mi · Sedan</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
-        <li class="car" data-body="suv" data-car="gclass"><a class="car-photo" href="car.html"><img src="assets/img/d-04-car-gclass-night.webp" width="1920" height="1080" alt="a black Mercedes-Benz G 500" loading="lazy"><span class="tag">Stock OM-2391</span></a><div class="car-info"><a class="car-name" href="car.html">2019 Mercedes-Benz G 500</a><span class="car-meta"><b>$119,000</b><span>26,500 mi · SUV</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
-        <li class="car" data-body="sedan" data-car="tesla"><a class="car-photo" href="car.html"><img src="assets/img/d-04-car-tesla-night.webp" width="1920" height="1080" alt="a white Tesla Model 3" loading="lazy"><span class="tag">Stock OM-2428</span></a><div class="car-info"><a class="car-name" href="car.html">2022 Tesla Model 3 Long Range</a><span class="car-meta"><b>$31,400</b><span>24,700 mi · Sedan</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
-        <li class="car" data-body="sedan" data-car="charger"><a class="car-photo" href="car.html"><img src="assets/img/d-04-car-charger-night.webp" width="1920" height="1080" alt="a black Dodge Charger SRT" loading="lazy"><span class="tag">Stock OM-2410</span></a><div class="car-info"><a class="car-name" href="car.html">2020 Dodge Charger SRT Hellcat</a><span class="car-meta"><b>$54,800</b><span>19,600 mi · Sedan</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
+        <li class="car" data-body="suv" data-car="defender"><a class="car-photo" href="car.html"><img src="assets/img/c-defender.webp" width="960" height="640" alt="Photo of this car: a dark grey Land Rover Defender 110 on a city street" loading="lazy"><span class="tag">Stock OM-2417</span></a><div class="car-info"><a class="car-name" href="car.html">2021 Land Rover Defender 110 SE</a><span class="car-meta"><b>$61,900</b><span>31,400 mi · SUV</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
+        <li class="car" data-body="coupe" data-car="porsche"><a class="car-photo" href="car.html"><img src="assets/img/c-porsche.webp" width="960" height="640" alt="Photo of this car: a grey Porsche 911 parked by a hedge" loading="lazy"><span class="tag">Stock OM-2402</span></a><div class="car-info"><a class="car-name" href="car.html">2020 Porsche 911 Turbo S</a><span class="car-meta"><b>$189,500</b><span>12,800 mi · Coupe</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
+        <li class="car" data-body="sedan" data-car="civic"><a class="car-photo" href="car.html"><img src="assets/img/c-civic.webp" width="960" height="640" alt="Photo of this car: a grey Honda Civic sedan in a parking lot" loading="lazy"><span class="tag">Stock OM-2433</span></a><div class="car-info"><a class="car-name" href="car.html">2019 Honda Civic EX</a><span class="car-meta"><b>$18,900</b><span>48,200 mi · Sedan</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
+        <li class="car" data-body="suv" data-car="gclass"><a class="car-photo" href="car.html"><img src="assets/img/c-gclass.webp" width="960" height="640" alt="Photo of this car: a black Mercedes-Benz G 500" loading="lazy"><span class="tag">Stock OM-2391</span></a><div class="car-info"><a class="car-name" href="car.html">2019 Mercedes-Benz G 500</a><span class="car-meta"><b>$119,000</b><span>26,500 mi · SUV</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
+        <li class="car" data-body="sedan" data-car="tesla"><a class="car-photo" href="car.html"><img src="assets/img/c-tesla.webp" width="960" height="640" alt="Photo of this car: the rear light of a white Tesla Model 3" loading="lazy"><span class="tag">Stock OM-2428</span></a><div class="car-info"><a class="car-name" href="car.html">2022 Tesla Model 3 Long Range</a><span class="car-meta"><b>$31,400</b><span>24,700 mi · Sedan</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
+        <li class="car" data-body="sedan" data-car="charger"><a class="car-photo" href="car.html"><img src="assets/img/c-charger.webp" width="960" height="640" alt="Photo of this car: a dark red Dodge Charger in a parking garage" loading="lazy"><span class="tag">Stock OM-2410</span></a><div class="car-info"><a class="car-name" href="car.html">2020 Dodge Charger SRT Hellcat</a><span class="car-meta"><b>$54,800</b><span>19,600 mi · Sedan</span></span><span class="car-actions"><a class="btn btn-dark" href="#ask-sheet" data-open="ask"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask</a><a class="btn btn-brand" href="#drive-sheet" data-open="drive">Test drive <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></div></li>
       </ul>
       <p class="empty" data-empty hidden>Nothing in this kind on the lot right now. Their listings fill this in.</p>
     </section>
@@ -297,7 +294,7 @@
       <div><p class="k">Visit</p><a href="https://www.google.com/maps/search/?api=1&amp;query=41-07%20Harbor%20Yard%20St%2C%20Queens%2C%20NY%2011101" rel="noopener" target="_blank">Directions</a><a href="#visit">Hours</a><a href="tel:+17185550179">Call us</a></div>
       <div><p class="k">About</p><a href="#visit">Reviews</a><a href="#visit">FAQ</a><span>Privacy</span></div>
     </div>
-    <p class="credits">3D cars from Sketchfab, CC BY 4.0: G 500 scan by arttujulin, 911 Turbo S by SeKali, Civic by NSJayden23, Defender 110 + Charger SRT by David_Holiday, Model 3 by Ameer Studio. Textures + skies: Poly Haven (CC0)</p>
+    <p class="credits">Car photos: Unsplash and Pexels (free licence)</p>
   </footer>
 
   <form class="dock" data-dock aria-label="Book a test drive" novalidate>
@@ -332,7 +329,7 @@
           <h2 class="sheet-title" id="sheet-title" tabindex="-1">Book a test drive</h2>
           <div class="bars" aria-hidden="true" data-bars><i></i><i></i><i></i><i></i></div>
           <p class="q"><span class="n">1</span>The car</p>
-          <div class="car-box"><img src="assets/img/d-04-car-defender-night.webp" width="1920" height="1080" alt="" data-car-thumb><span class="car-box-text"><b data-car-name>2021 Land Rover Defender 110 SE</b><span data-car-meta>$61,900 · 31,400 mi</span></span><button type="button" class="link-btn" data-change>Change</button></div>
+          <div class="car-box"><img src="assets/img/c-defender.webp" width="960" height="640" alt="" data-car-thumb><span class="car-box-text"><b data-car-name>2021 Land Rover Defender 110 SE</b><span data-car-meta>$61,900 · 31,400 mi</span></span><button type="button" class="link-btn" data-change>Change</button></div>
           <div class="mini-tiles" data-mini hidden>
             <button type="button" data-pick="defender">Defender</button><button type="button" data-pick="porsche">911</button><button type="button" data-pick="civic">Civic</button><button type="button" data-pick="gclass">G 500</button><button type="button" data-pick="tesla">Model 3</button><button type="button" data-pick="charger">Charger</button>
           </div>
@@ -398,7 +395,7 @@
         <form class="sheet-form" id="ask-sheet" data-form="ask" novalidate hidden>
           <p class="sheet-kicker">Oakline Motors · Ask</p>
           <h2 class="sheet-title" tabindex="-1">Ask about this car</h2>
-          <div class="car-box"><img src="assets/img/d-05-detail-night.webp" width="1920" height="1080" alt="" data-car-thumb><span class="car-box-text"><b data-car-name>2021 Land Rover Defender 110 SE</b><span data-car-meta>$61,900 · 31,400 mi</span></span></div>
+          <div class="car-box"><img src="assets/img/c-look.webp" width="960" height="640" alt="" data-car-thumb><span class="car-box-text"><b data-car-name>2021 Land Rover Defender 110 SE</b><span data-car-meta>$61,900 · 31,400 mi</span></span></div>
           <p class="k k-row">Tap a question</p>
           <div class="qlist">
             <label class="qopt"><input type="radio" name="question" value="Is it still available?" checked><span><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Is it still available?<svg class="ic tick" aria-hidden="true"><use href="#i-check"/></svg></span></label>
