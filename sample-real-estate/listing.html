@@ -81,26 +81,26 @@
   <main id="main" class="listing">
     <div class="ldetails">
       <div class="gallery" aria-label="Photos of this home">
-        <div class="photo-slot g-main"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Their listing photo<div class="g-btns"><button class="btn btn-sm" type="button" data-light="All their photos"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>All photos</button><button class="btn btn-sm" type="button" data-light="Their floor plan"><svg class="ic" aria-hidden="true"><use href="#i-plan"/></svg>Floor plan</button></div></div>
-        <div class="photo-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Photo</div>
-        <div class="photo-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Photo</div>
-        <div class="photo-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Photo</div>
-        <div class="photo-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Photo</div>
+        <figure class="g-main"><img src="assets/img/g-1.webp" width="1440" height="960" alt="Living room: brick wall, two tall windows on the skyline, herringbone oak floor" fetchpriority="high"><div class="g-btns"><button class="btn btn-sm" type="button" data-light="photos"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>All photos</button><button class="btn btn-sm" type="button" data-light="plan"><svg class="ic" aria-hidden="true"><use href="#i-plan"/></svg>Floor plan</button></div></figure>
+        <figure><img src="assets/img/g-2.webp" width="1440" height="960" alt="Kitchen with sage cabinets and a marble island" loading="lazy"></figure>
+        <figure><img src="assets/img/g-3.webp" width="1440" height="960" alt="Bedroom 1 between two windows" loading="lazy"></figure>
+        <figure><img src="assets/img/g-4.webp" width="1440" height="960" alt="Bathroom with subway tile and a tub" loading="lazy"></figure>
+        <figure><img src="assets/img/g-5.webp" width="1440" height="960" alt="Bedroom 2 with a desk at the window" loading="lazy"></figure>
       </div>
-      <div class="ltitle"><h1><span class="slot slot--xl">{listing address}</span></h1><span class="slot">{neighborhood}</span></div>
-      <p class="lfacts lfacts--page"><span class="slot slot--xl">{price}</span><span><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg><span class="slot">{beds}</span></span><span><svg class="ic" aria-hidden="true"><use href="#i-bath"/></svg><span class="slot">{baths}</span></span><span><svg class="ic" aria-hidden="true"><use href="#i-ruler"/></svg><span class="slot">{sq ft}</span></span><span><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg><span class="slot">{type}</span></span></p>
+      <div class="ltitle"><h1>E 36th St, Apt 4F</h1><span class="tag">Murray Hill</span><span class="tag tag--sale">For sale</span></div>
+      <p class="lfacts lfacts--page"><b class="price price--xl">$1,295,000</b><span><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg>2 beds</span><span><svg class="ic" aria-hidden="true"><use href="#i-bath"/></svg>2 baths</span><span><svg class="ic" aria-hidden="true"><use href="#i-ruler"/></svg>1,140 sq ft</span><span><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg>Condo · pre-war, elevator</span></p>
       <div class="about-home">
         <p class="k">About this home</p>
-        <span class="slot w1">{their description}</span>
-        <span class="slot w2">{their description, continued}</span>
-        <span class="slot w3">{their description, continued}</span>
-        <div class="photo-slot plan-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Their floor plan</div>
+        <p>A bright pre-war two-bedroom on a quiet Murray Hill block, two flights up in an elevator building. The living room has an exposed brick wall, herringbone oak floors and two tall windows on the skyline.</p>
+        <p>The kitchen has sage shaker cabinets, a marble island and a stainless range. Both bedrooms fit a queen bed; the second works as an office. A stacked washer and dryer sits in the hall closet.</p>
+        <p>Common charges $1,140/mo · Taxes $1,020/mo · Pets allowed · Five minutes from the 6 at 33 St.</p>
+        <figure class="plan-inline"><img src="assets/img/floor-plan.svg" width="900" height="600" alt="Floor plan: living room, kitchen, two bedrooms, bathroom and hall" loading="lazy"></figure>
       </div>
     </div>
     <aside class="see" aria-labelledby="h-see">
       <h2 class="see-title" id="h-see">See it in person</h2>
       <p class="k">Open house</p>
-      <span class="slot">{open house day + time, if any}</span>
+      <p class="open-house"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Sunday · 12:00 – 2:00 PM</p>
       <form data-viewing-card>
         <p class="k">Or pick a time</p>
         <div class="chips" data-days="card"><label class="chip"><input type="radio" name="day" value="1"><span>Thu 12</span></label><label class="chip"><input type="radio" name="day" value="2"><span>Fri 13</span></label><label class="chip"><input type="radio" name="day" value="3" checked><span>Sat 14</span></label><label class="chip"><input type="radio" name="day" value="4"><span>Sun 15</span></label></div>
@@ -108,7 +108,7 @@
         <button class="btn btn-brand btn-block btn-lg" type="submit">Book a viewing <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button>
       </form>
       <button class="btn btn-paper btn-block" type="button" data-open="question"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Ask a question</button>
-      <div class="agent"><span class="agent-pic"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><span class="agent-slots"><span class="slot">{agent name}</span><span class="slot">{licence #}</span></span></div>
+      <div class="agent"><span class="avatar avatar--sm" aria-hidden="true">MC</span><span class="agent-slots"><b>Maya Chen</b><span class="muted">Broker · Lic. 10491205738</span></span></div>
       <div class="card-actions two">
         <a class="btn btn-paper" href="tel:+12125550192"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
         <a class="btn btn-paper" href="sms:+12125550192"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Text</a>
@@ -124,14 +124,14 @@
       <nav class="foot-nav" aria-label="Footer">
         <a href="index.html#listings">Buy</a><a href="index.html#listings">Rent</a><a href="index.html#sellers">Sell</a><a href="index.html#owners">Owners</a><a href="index.html#mortgage">Mortgage</a><a href="index.html#team">About</a><a href="index.html#neighborhoods">Neighborhoods</a>
       </nav>
-      <span class="slot">{instagram · facebook}</span>
+      <span class="socials">@stoopline.nyc</span>
     </div>
     <div class="foot-legal">
       <span class="eho-foot"><svg class="ic" aria-hidden="true"><use href="#i-eho"/></svg>Equal Housing Opportunity</span>
       <span>NYS Fair Housing Notice</span>
       <span>Standard Operating Procedures</span>
       <span>Agency disclosure</span>
-      <span class="lic"><span class="k">Licensed real estate broker</span> <span class="slot">{licence #}</span></span>
+      <span class="lic"><span class="k">Licensed real estate broker</span> <span>#10491205738</span></span>
       <span class="made">Sample site made by Eshtyhar</span>
     </div>
   </footer>
@@ -171,9 +171,10 @@
     <a class="btn btn-brand" href="#viewing-sheet" data-open="viewing">Book a viewing</a>
   </div>
 
-  <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Photos">
+  <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Photos and floor plan">
     <button class="close" type="button" data-light-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
-    <div class="photo-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg><span data-light-text>Their photos</span></div>
+    <div class="lb-photos" data-lb="photos"><img src="assets/img/g-1.webp" width="1440" height="960" alt="" loading="lazy"><img src="assets/img/g-2.webp" width="1440" height="960" alt="" loading="lazy"><img src="assets/img/g-3.webp" width="1440" height="960" alt="" loading="lazy"><img src="assets/img/g-4.webp" width="1440" height="960" alt="" loading="lazy"><img src="assets/img/g-5.webp" width="1440" height="960" alt="" loading="lazy"></div>
+    <img class="lb-plan" data-lb="plan" src="assets/img/floor-plan.svg" width="900" height="600" alt="Floor plan of E 36th St, Apt 4F">
   </div>
 
   <div class="sheet-root" id="sheets" hidden data-sheets>
@@ -187,7 +188,7 @@
           <p class="label">Book a viewing</p>
           <h2 class="sheet-title" id="sheet-title" tabindex="-1">See it in person.</h2>
           <p class="sheet-sub">We'll text you to confirm the time.</p>
-          <div class="listing-box"><span class="thumb-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Photo</span><span class="listing-box-slots"><span class="slot">{listing address}</span><span><span class="slot">{price}</span> <span class="slot">{beds · baths}</span></span></span></div>
+          <div class="listing-box"><img class="thumb" src="assets/img/l-1.webp" width="96" height="64" alt="" data-box-img><span class="listing-box-text"><b data-box-addr>E 36th St, Apt 4F</b><span data-box-meta>$1,295,000 · 2 bd · 2 ba</span></span></div>
           <p class="k k-row">Day</p>
           <div class="chips" data-days="sheet"><label class="chip"><input type="radio" name="day" value="1"><span>Thu 12</span></label><label class="chip"><input type="radio" name="day" value="2"><span>Fri 13</span></label><label class="chip"><input type="radio" name="day" value="3" checked><span>Sat 14</span></label><label class="chip"><input type="radio" name="day" value="4"><span>Sun 15</span></label></div>
           <p class="k k-row">Time</p>
@@ -214,8 +215,8 @@
           <dl class="summary">
             <div><dt>When</dt><dd data-sum-when></dd></div>
             <div><dt>How</dt><dd data-sum-how></dd></div>
-            <div><dt>Who</dt><dd><span class="slot">{agent name}</span></dd></div>
-            <div><dt>Where</dt><dd><span class="slot">{listing address}</span></dd></div>
+            <div><dt>Who</dt><dd>Maya Chen</dd></div>
+            <div><dt>Where</dt><dd data-sum-where>E 36th St, Apt 4F</dd></div>
           </dl>
           <div class="card-actions two">
             <button class="btn btn-quiet" type="button" data-ics><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Add to calendar</button>
@@ -284,7 +285,7 @@
             <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span class="field-in"><span class="k">Mobile</span><input type="tel" name="mobile" autocomplete="tel" inputmode="tel" required></span></label>
             <label class="field field--full"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><span class="field-in"><span class="k">Email</span><input type="email" name="email" autocomplete="email" inputmode="email"></span></label>
           </div>
-          <p class="fine"><span class="slot">{mortgage broker or partner}</span> · NMLS <span class="slot">{NMLS #}</span> · Equal Housing Opportunity</p>
+          <p class="fine">Harbor Lane Mortgage · NMLS 2287451 · Equal Housing Opportunity</p>
           <p class="fine">No rates on this page: they depend on you, so the broker shows you yours.</p>
           <p class="form-error" data-error role="alert"></p>
           <div class="sheet-foot">
@@ -313,7 +314,7 @@
           <p class="label">Ask a question</p>
           <h2 class="sheet-title" tabindex="-1">About this home.</h2>
           <p class="sheet-sub">The agent for this listing gets back to you, usually by text.</p>
-          <div class="listing-box"><span class="thumb-slot"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg>Photo</span><span class="listing-box-slots"><span class="slot">{listing address}</span><span><span class="slot">{price}</span> <span class="slot">{beds · baths}</span></span></span></div>
+          <div class="listing-box"><img class="thumb" src="assets/img/l-1.webp" width="96" height="64" alt=""><span class="listing-box-text"><b>E 36th St, Apt 4F</b><span>$1,295,000 · 2 bd · 2 ba</span></span></div>
           <div class="fields">
             <label class="field field--full"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><span class="field-in"><span class="k">Your question</span><input type="text" name="questions" placeholder="Light, closets, the building..."></span></label>
             <label class="field"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg><span class="field-in"><span class="k">Name</span><input type="text" name="name" autocomplete="name" required></span></label>

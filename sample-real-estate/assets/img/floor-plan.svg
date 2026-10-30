@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Geist, Segoe UI, Arial, sans-serif">
+  <rect width="900" height="600" fill="#FFFBF4"/>
+  <g fill="none" stroke="#141A24" stroke-width="8" stroke-linejoin="round">
+    <path d="M60 60H840V540H60Z"/>
+    <path d="M420 60V300M420 360V540M60 300H330M390 300H600M660 300H840M600 300V540M600 420H840M240 300V400"/>
+  </g>
+  <g fill="none" stroke="#141A24" stroke-width="3">
+    <path d="M110 60H230M480 60H620M690 60H800M60 380V480M840 120V240"/>
+  </g>
+  <g fill="#B8731A" font-size="22" font-weight="600" text-anchor="middle">
+    <text x="240" y="180">Living room</text><text x="240" y="208" font-size="16" font-weight="400" fill="#4A5160">22' x 15'</text>
+    <text x="630" y="180">Bedroom 1</text><text x="630" y="208" font-size="16" font-weight="400" fill="#4A5160">14' x 12'</text>
+    <text x="150" y="430">Kitchen</text><text x="150" y="458" font-size="16" font-weight="400" fill="#4A5160">12' x 10'</text>
+    <text x="420" y="430">Hall</text><text x="420" y="458" font-size="16" font-weight="400" fill="#4A5160">W/D closet</text>
+    <text x="720" y="370">Bath</text>
+    <text x="720" y="490">Bedroom 2</text><text x="720" y="516" font-size="16" font-weight="400" fill="#4A5160">11' x 9'</text>
+  </g>
+  <text x="840" y="585" text-anchor="end" font-size="14" fill="#4A5160">Not to scale · 1,140 sq ft</text>
+</svg>

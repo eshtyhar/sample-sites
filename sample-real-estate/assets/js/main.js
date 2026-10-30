@@ -472,7 +472,7 @@
     var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//' + BUSINESS + '//Viewing//EN', 'BEGIN:VEVENT',
       'UID:' + Date.now() + '@sample', 'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z',
       'DTSTART;TZID=America/New_York:' + start, 'DURATION:PT30M', 'SUMMARY:Viewing with ' + BUSINESS,
-      'DESCRIPTION:' + (booked.how === 'video' ? 'Video tour' : 'In person') + '. Need to change it? Call ' + PHONE, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+      'LOCATION:' + (viewingAt || 'E 36th St, Apt 4F') + ', New York, NY', 'DESCRIPTION:' + (booked.how === 'video' ? 'Video tour' : 'In person') + '. Need to change it? Call ' + PHONE, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
     var a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
     a.download = 'viewing.ics';
@@ -481,11 +481,29 @@
     window.setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   });
 
+  var listingCards = $$('.lcard [data-listing-addr]');
+  var viewingAt = null;
+  function setListing(src) {
+    if (!src || !src.getAttribute('data-listing-addr')) return;
+    var img = src.getAttribute('data-listing-img'), addr = src.getAttribute('data-listing-addr'), meta = src.getAttribute('data-listing-meta');
+    viewingAt = addr;
+    $$('[data-box-img]').forEach(function (el) { el.src = img; });
+    $$('[data-box-addr]').forEach(function (el) { el.textContent = addr; });
+    $$('[data-box-meta]').forEach(function (el) { el.textContent = meta; });
+    $$('[data-sum-where]').forEach(function (el) { el.textContent = addr; });
+  }
+  var pickSel = $('[data-pick]');
+  if (pickSel) pickSel.addEventListener('change', function () {
+    var src = listingCards[Number(pickSel.value)];
+    if (src) $('[data-pick-img]').src = src.getAttribute('data-listing-img');
+  });
+
   $$('[data-open]').forEach(function (b) {
     b.addEventListener('click', function (e) {
       e.preventDefault();
       var kind = b.getAttribute('data-open');
       var preset = null;
+      if (kind === 'viewing') setListing(b);
       if (kind === 'value' && bar && bar.elements.home && bar.elements.home.value) preset = { address: bar.elements.home.value };
       if (kind === 'proposal') {
         var units = $('[data-units-quick] .is-on');
@@ -504,6 +522,7 @@
       e.preventDefault();
       var o = read(card);
       if (o.day != null) pickedDay = Number(o.day);
+      if (o.listing != null) setListing(listingCards[Number(o.listing)]);
       openSheet(cardFor[sel], $('button[type="submit"]', card), o);
     });
   });
@@ -536,7 +555,8 @@
     $$('[data-light]').forEach(function (b) {
       b.addEventListener('click', function () {
         boxOpener = b;
-        $('[data-light-text]', box).textContent = b.getAttribute('data-light');
+        var want = b.getAttribute('data-light');
+        $$('[data-lb]', box).forEach(function (el) { el.hidden = el.getAttribute('data-lb') !== want; });
         box.hidden = false;
         window.requestAnimationFrame(function () { box.classList.add('is-open'); $('.close', box).focus(); });
       });
