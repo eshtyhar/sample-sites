@@ -163,6 +163,22 @@
 
   /* ------------------------------------------------------------ the story: the rental day */
   var story = $('[data-story]');
+  function glideTo(y) {
+    if (window.CalmScroll) CalmScroll.to(y);
+    else window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+  // Calm scroll (tools/calm-scroll.js): one move = one stop, a slow eased glide - each stop rests where its own picture
+  // has fully come in (every car of the fleet too), so the words and the picture always match; the last stop opens the page.
+  if (window.CalmScroll && story) CalmScroll.story(function () {
+    var top = story.offsetTop, s = [top];
+    keys.forEach(function (k, i) { if (i) s.push(top + (k.at + k.w / 2 + 0.04) * vh); });
+    for (var i = 1; i < UNITS.length; i++) {
+      var own = keys.some(function (k) { return k.at >= starts[i] && k.at < starts[i] + UNITS[i]; });
+      if (!own) s.push(top + (starts[i] + 0.06 * UNITS[i]) * vh);
+    }
+    s.push(top + story.offsetHeight - (phoneMq.matches ? 64 : 92));
+    return s;
+  });
   var steps = $$('.step');
   var layers = {};
   $$('[data-layer]').forEach(function (l) { layers[l.getAttribute('data-layer')] = l; });
@@ -311,15 +327,15 @@
 
   function scrollToStep(i, frac) {
     var y = story.offsetTop + (starts[i] + (frac || .06) * UNITS[i]) * vh;
-    window.scrollTo({ top: Math.ceil(y), behavior: reduceMotion ? 'auto' : 'smooth' });
+    glideTo(Math.ceil(y));
   }
   function goTo(hash) {
     var idx = steps.map(function (s) { return '#' + s.id; }).indexOf(hash);
     if (idx >= 0 && story) { scrollToStep(idx, .06); return true; }
-    if (hash === '#top') { window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }); return true; }
+    if (hash === '#top') { glideTo(0); return true; }
     var el = hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
     if (!el) return false;
-    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - (phoneMq.matches ? 64 : 92), behavior: reduceMotion ? 'auto' : 'smooth' });
+    glideTo(el.getBoundingClientRect().top + window.scrollY - (phoneMq.matches ? 64 : 92));
     return true;
   }
   document.addEventListener('click', function (e) {
