@@ -54,6 +54,20 @@
 
   /* ------------------------------------------------------------ the story */
   var story = $('[data-story]');
+  function glideTo(y) {
+    if (window.CalmScroll) CalmScroll.to(y);
+    else window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+  // Calm scroll (tools/calm-scroll.js): one move = one stop, a slow eased glide - the gate rolls all the way up, then
+  // each of the six cars on its own, then the rest of the story; the last stop opens the page below.
+  if (window.CalmScroll && story) CalmScroll.story(function () {
+    var top = story.offsetTop, unit = PER * vh, u = [0, 1.8, 2.08];
+    for (var k = 0; k < 6; k++) u.push(3 + (k + 0.5) / 6);
+    u.push(4.08, 5.08, 6.08, 7.08);
+    var s = u.map(function (x) { return top + x * unit; });
+    s.push(top + story.offsetHeight - (phoneMq.matches ? 60 : 80));
+    return s;
+  });
   var stills = {};
   $$('[data-still]').forEach(function (el) { stills[el.getAttribute('data-still')] = el; });
   var steps = $$('.step');
@@ -222,15 +236,15 @@
 
   function goUnit(unit) {
     if (!story) return;
-    window.scrollTo({ top: Math.ceil(story.offsetTop + unit * PER * vh), behavior: reduceMotion ? 'auto' : 'smooth' });
+    glideTo(Math.ceil(story.offsetTop + unit * PER * vh));
   }
   function goTo(hash) {
     var id = hash.slice(1);
-    if (id === 'top') { window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }); return true; }
+    if (id === 'top') { glideTo(0); return true; }
     if (story && UNIT_OF[id] != null) { goUnit(UNIT_OF[id]); return true; }
     var el = id ? document.getElementById(id) : null;
     if (!el) return false;
-    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - (phoneMq.matches ? 60 : 80), behavior: reduceMotion ? 'auto' : 'smooth' });
+    glideTo(el.getBoundingClientRect().top + window.scrollY - (phoneMq.matches ? 60 : 80));
     return true;
   }
   document.addEventListener('click', function (e) {
