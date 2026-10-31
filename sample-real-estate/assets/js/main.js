@@ -131,6 +131,18 @@
 
   /* ------------------------------------------------------------ the story: seven stops, one still each */
   var story = $('[data-story]');
+  function glideTo(y) {
+    if (window.CalmScroll) CalmScroll.to(y);
+    else window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+  // Calm scroll (tools/calm-scroll.js): one move = one floor, a slow eased glide; the last stop opens the paper part.
+  if (window.CalmScroll && story) CalmScroll.story(function () {
+    var top = story.offsetTop, s = [top];
+    for (var i = 1; i < 7; i++) s.push(top + (i + 0.08) * PER * vh);
+    var after = paper ? paper.getBoundingClientRect().top + window.scrollY : top + story.offsetHeight;
+    s.push(after - (phoneMq.matches ? 70 : 92));
+    return s;
+  });
   var stills = $$('[data-still]');
   var steps = $$('.step');
   var current = -1;
@@ -283,16 +295,16 @@
   function scrollToStep(i) {
     if (!story) return;
     var y = story.offsetTop + (i + 0.08) * PER * vh;
-    window.scrollTo({ top: Math.ceil(y), behavior: reduceMotion ? 'auto' : 'smooth' });
+    glideTo(Math.ceil(y));
   }
   function goTo(hash) {
     var stepIdx = steps.map(function (s) { return '#' + s.id; }).indexOf(hash);
     if (stepIdx >= 0) { scrollToStep(stepIdx); return true; }
-    if (hash === '#top') { window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }); return true; }
+    if (hash === '#top') { glideTo(0); return true; }
     var el = hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
     if (!el) return false;
     var top = el.getBoundingClientRect().top + window.scrollY - (phoneMq.matches ? 70 : 92);
-    window.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
+    glideTo(top);
     return true;
   }
 
